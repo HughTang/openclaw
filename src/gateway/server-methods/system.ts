@@ -13,7 +13,11 @@ import {
   validateSystemInfoParams,
 } from "../../../packages/gateway-protocol/src/index.js";
 import { validateSystemEventParams } from "../../../packages/gateway-protocol/src/schema.js";
-import { listAgentIds } from "../../agents/agent-scope.js";
+import { listAgentIds, resolveDefaultAgentId } from "../../agents/agent-scope.js";
+import {
+  readUtilityModelSetting,
+  resolveUtilityModelRefForAgent,
+} from "../../agents/utility-model.js";
 import { resolveGatewayPort, resolveStateDir } from "../../config/paths.js";
 import { resolveMainSessionKeyFromConfig } from "../../config/sessions.js";
 import { resolveAdvertisedLanHost } from "../../infra/advertised-lan-host.js";
@@ -52,8 +56,20 @@ async function collectSystemInfo(context: GatewayRequestContext): Promise<System
   const loadAverage: [number, number, number] = [oneMinute, fiveMinutes, fifteenMinutes];
   const stateDir = resolveStateDir();
   const disk = tryReadDiskSpace(stateDir);
-  const port = resolveGatewayPort(context.getRuntimeConfig());
+  const config = context.getRuntimeConfig();
+  const port = resolveGatewayPort(config);
   const lanAddress = (await resolveCachedAdvertisedLanHost()) ?? undefined;
+  const defaultAgentId = resolveDefaultAgentId(config);
+  const utilitySetting = readUtilityModelSetting(config, defaultAgentId);
+  const utilityModel = resolveUtilityModelRefForAgent({ cfg: config, agentId: defaultAgentId });
+  const defaultAgentUtilityModel =
+    utilitySetting.kind === "disabled"
+      ? ({ status: "disabled" } as const)
+      : utilitySetting.kind === "explicit"
+        ? ({ status: "configured", model: utilitySetting.modelRef } as const)
+        : utilityModel
+          ? ({ status: "auto", model: utilityModel } as const)
+          : ({ status: "unavailable" } as const);
 
   return {
     machineName: await getMachineDisplayName(),
@@ -80,6 +96,7 @@ async function collectSystemInfo(context: GatewayRequestContext): Promise<System
           diskPath: stateDir,
         }
       : {}),
+    defaultAgentUtilityModel,
   };
 }
 

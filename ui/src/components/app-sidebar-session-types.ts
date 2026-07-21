@@ -1,3 +1,4 @@
+import type { SessionObserverDigest } from "../../../packages/gateway-protocol/src/schema/sessions.js";
 import type { SessionAgentAttentionIconId } from "../../../packages/gateway-protocol/src/session-icon.js";
 import type { GatewayBrowserClient } from "../api/gateway.ts";
 import type { SessionRunStatus } from "../api/types.ts";
@@ -56,6 +57,7 @@ export type SidebarRecentSession = {
   active: boolean;
   visuallyActive: boolean;
   hasActiveRun: boolean;
+  activeRunIds?: readonly string[];
   modelSelectionLocked: boolean;
   kind?: string;
   pinned: boolean;
@@ -73,8 +75,13 @@ export type SidebarRecentSession = {
   hasAutomation: boolean;
   hasOpenPullRequest: boolean;
   unread: boolean;
+  lastReadAt?: number;
   attention: SidebarSessionAttention;
   agentStatusNote?: string;
+  observerDigest?: Pick<
+    SessionObserverDigest,
+    "runId" | "headline" | "health" | "updatedAt" | "revision"
+  >;
   spawnedBy?: string;
   status?: SessionRunStatus;
   startedAt?: number;
