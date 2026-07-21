@@ -26,10 +26,12 @@ import {
   persistRequestedUpdateChannel,
   restoreDroppedPreUpdateChannels,
 } from "./update-command-config.js";
-import { POST_PLUGIN_DOCTOR_EXECUTION_FAILED_REASON } from "./update-command-fresh-doctor.js";
-import { updatePluginsAfterCoreUpdate } from "./update-command-plugins.js";
 import {
   completePostCorePluginUpdate,
+  POST_PLUGIN_DOCTOR_EXECUTION_FAILED_REASON,
+} from "./update-command-fresh-doctor.js";
+import { updatePluginsAfterCoreUpdate } from "./update-command-plugins.js";
+import {
   continuePostCoreUpdateInFreshProcess,
   markControlPlaneUpdateRestartSentinelFailureBestEffort,
   shouldResumePostCoreUpdateInFreshProcess,

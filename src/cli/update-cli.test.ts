@@ -448,7 +448,7 @@ const { runDaemonRestart, runDaemonInstall } = await import("./daemon-cli.js");
 const { doctorCommand } = await import("../commands/doctor.js");
 const { defaultRuntime } = await import("../runtime.js");
 const postCorePluginConvergence = await import("./update-cli/post-core-plugin-convergence.js");
-const { completePostCorePluginUpdate } = await import("./update-cli/update-command-post-core.js");
+const { completePostCorePluginUpdate } = await import("./update-cli/update-command-fresh-doctor.js");
 const runPostCorePluginConvergenceSpy = vi.spyOn(
   postCorePluginConvergence,
   "runPostCorePluginConvergence",

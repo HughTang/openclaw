@@ -8,14 +8,10 @@ import { normalizeOptionalString } from "@openclaw/normalization-core/string-coe
 import { theme } from "../../../packages/terminal-core/src/theme.js";
 import { doctorCommand } from "../../commands/doctor.js";
 import {
-  UPDATE_DEFER_CONFIGURED_PLUGIN_INSTALL_REPAIR_ENV,
-  UPDATE_PARENT_SUPPORTS_DOCTOR_CONFIG_WRITE_ENV,
-} from "../../commands/doctor/shared/update-phase.js";
-import {
   assertConfigWriteAllowedInCurrentMode,
   readConfigFileSnapshot,
 } from "../../config/config.js";
-import type { ConfigFileSnapshot, OpenClawConfig } from "../../config/types.openclaw.js";
+import type { OpenClawConfig } from "../../config/types.openclaw.js";
 import type { PluginInstallRecord } from "../../config/types.plugins.js";
 import { resolveGatewayInstallEntrypoint } from "../../daemon/gateway-entrypoint.js";
 import { hasErrnoCode } from "../../infra/errors.js";
@@ -71,8 +67,8 @@ import {
   writePostCoreSourceConfigFile,
 } from "./update-command-config.js";
 import {
-  applyFreshPostPluginDoctor,
-  applyPostPluginConfigValidation,
+  completePostCorePluginUpdate,
+  withUpdateFinalizationEnv,
 } from "./update-command-fresh-doctor.js";
 import {
   updatePluginsAfterCoreUpdate,
@@ -131,89 +127,6 @@ type UpdateFinalizeResult = {
     plugins: PostCorePluginUpdateResult;
   };
 };
-
-function withUpdateFinalizationEnv<T>(run: () => Promise<T>): Promise<T> {
-  const previousUpdateInProgress = process.env.OPENCLAW_UPDATE_IN_PROGRESS;
-  const previousDeferConfiguredPluginInstallRepair =
-    process.env[UPDATE_DEFER_CONFIGURED_PLUGIN_INSTALL_REPAIR_ENV];
-  const previousParentSupportsDoctorConfigWrite =
-    process.env[UPDATE_PARENT_SUPPORTS_DOCTOR_CONFIG_WRITE_ENV];
-  process.env.OPENCLAW_UPDATE_IN_PROGRESS = "1";
-  process.env[UPDATE_DEFER_CONFIGURED_PLUGIN_INSTALL_REPAIR_ENV] = "1";
-  process.env[UPDATE_PARENT_SUPPORTS_DOCTOR_CONFIG_WRITE_ENV] = "1";
-  return run().finally(() => {
-    if (previousUpdateInProgress === undefined) {
-      delete process.env.OPENCLAW_UPDATE_IN_PROGRESS;
-    } else {
-      process.env.OPENCLAW_UPDATE_IN_PROGRESS = previousUpdateInProgress;
-    }
-    if (previousDeferConfiguredPluginInstallRepair === undefined) {
-      delete process.env[UPDATE_DEFER_CONFIGURED_PLUGIN_INSTALL_REPAIR_ENV];
-    } else {
-      process.env[UPDATE_DEFER_CONFIGURED_PLUGIN_INSTALL_REPAIR_ENV] =
-        previousDeferConfiguredPluginInstallRepair;
-    }
-    if (previousParentSupportsDoctorConfigWrite === undefined) {
-      delete process.env[UPDATE_PARENT_SUPPORTS_DOCTOR_CONFIG_WRITE_ENV];
-    } else {
-      process.env[UPDATE_PARENT_SUPPORTS_DOCTOR_CONFIG_WRITE_ENV] =
-        previousParentSupportsDoctorConfigWrite;
-    }
-  });
-}
-
-async function withNormalConfigValidation<T>(run: () => Promise<T>): Promise<T> {
-  const previousUpdateInProgress = process.env.OPENCLAW_UPDATE_IN_PROGRESS;
-  process.env.OPENCLAW_UPDATE_IN_PROGRESS = "0";
-  try {
-    return await run();
-  } finally {
-    if (previousUpdateInProgress === undefined) {
-      delete process.env.OPENCLAW_UPDATE_IN_PROGRESS;
-    } else {
-      process.env.OPENCLAW_UPDATE_IN_PROGRESS = previousUpdateInProgress;
-    }
-  }
-}
-
-export async function completePostCorePluginUpdate(params: {
-  root: string;
-  pluginUpdate: PostCorePluginUpdateResult;
-  freshDoctorRequired: boolean;
-  yes: boolean;
-  json: boolean;
-  timeoutMs: number;
-  nodeRunner?: string;
-}): Promise<{
-  pluginUpdate: PostCorePluginUpdateResult;
-  configSnapshot: ConfigFileSnapshot;
-}> {
-  let pluginUpdate = params.pluginUpdate;
-  let freshConfigValid: boolean | undefined;
-  if (pluginUpdate.status !== "error" && params.freshDoctorRequired) {
-    // The current process can still hold the pre-update plugin and schema. Reload the updated
-    // migration owner before trusting strict validation or restarting the gateway.
-    const freshResult = await applyFreshPostPluginDoctor({
-      root: params.root,
-      pluginUpdate,
-      yes: params.yes,
-      json: params.json,
-      timeoutMs: params.timeoutMs,
-      ...(params.nodeRunner ? { nodeRunner: params.nodeRunner } : {}),
-    });
-    pluginUpdate = freshResult.pluginUpdate;
-    freshConfigValid = freshResult.configValid;
-  }
-
-  const configSnapshot = await withNormalConfigValidation(() => readConfigFileSnapshot());
-  // A plugin migration that did not converge must fail finalization instead of letting legacy
-  // config reach the restarted gateway.
-  pluginUpdate = applyPostPluginConfigValidation(
-    pluginUpdate,
-    freshConfigValid ?? configSnapshot.valid,
-  );
-  return { pluginUpdate, configSnapshot };
-}
 
 export async function updateFinalizeCommand(opts: UpdateFinalizeOptions): Promise<void> {
   suppressDeprecations();
