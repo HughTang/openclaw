@@ -142,7 +142,7 @@ export type ChannelOwnedSetupContract = {
     accountId: string;
     input: unknown;
     runtime: RuntimeEnv;
-  }) => Promise<unknown> | unknown;
+  }) => Promise<object> | object;
   resolveBindingAccountId?: ChannelOwnedSetupAdapterShape<{
     name?: string;
   }>["resolveBindingAccountId"];
@@ -189,6 +189,7 @@ export function resolveChannelSetupExecutionAdapter(plugin: {
     return undefined;
   }
   const legacyInput = (input: unknown): ChannelSetupInput => input as ChannelSetupInput;
+  const prepareAccountConfigInput = legacy.prepareAccountConfigInput;
   return {
     ...(legacy.resolveAccountId
       ? {
@@ -198,10 +199,10 @@ export function resolveChannelSetupExecutionAdapter(plugin: {
             "default",
         }
       : {}),
-    ...(legacy.prepareAccountConfigInput
+    ...(prepareAccountConfigInput
       ? {
           prepareAccountConfigInput: (params) =>
-            legacy.prepareAccountConfigInput?.({
+            prepareAccountConfigInput({
               ...params,
               input: legacyInput(params.input),
             }),
@@ -337,8 +338,9 @@ export function defineChannelSetupContract<const Fields extends Record<string, C
   const adapter =
     params.adapter ??
     (params.legacyAdapter as TypedChannelSetupAdapter<ChannelSetupInputForFields<Fields>>);
+  const prepareAccountConfigInput = adapter.prepareAccountConfigInput;
   const metadata: ChannelSetupMetadata = {
-    fields: Object.entries(fields).map(([key, field]) => ({ key, ...field })),
+    fields: Object.entries(fields).map(([key, field]) => Object.assign({ key }, field)),
   };
   return {
     kind: "channel-owned",
@@ -355,10 +357,10 @@ export function defineChannelSetupContract<const Fields extends Record<string, C
             "default",
         }
       : {}),
-    ...(adapter.prepareAccountConfigInput
+    ...(prepareAccountConfigInput
       ? {
           prepareAccountConfigInput: async (inputParams) =>
-            await adapter.prepareAccountConfigInput?.({
+            await prepareAccountConfigInput({
               ...inputParams,
               input: requireParsedInput(fields, inputParams.input),
             }),
