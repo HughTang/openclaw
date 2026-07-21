@@ -52,13 +52,19 @@ function getOptionNames(command: Command): string[] {
   return command.options.map((option) => option.attributeName());
 }
 
-function resolveChannelsAddOptions(
+export function resolveChannelsAddOptions(
   channelArg: string | undefined,
   opts: Record<string, unknown>,
+  command?: Pick<Command, "getOptionValueSource">,
 ): Record<string, unknown> {
+  const forwardedOpts = command
+    ? Object.fromEntries(
+        Object.entries(opts).filter(([key]) => command.getOptionValueSource(key) === "cli"),
+      )
+    : opts;
   return {
-    ...opts,
-    channel: opts.channel ?? channelArg,
+    ...forwardedOpts,
+    channel: forwardedOpts.channel ?? channelArg,
   };
 }
 
@@ -75,9 +81,9 @@ function shouldRegisterChannelSetupOptions(
 }
 
 async function addChannelSetupOptions(command: Command): Promise<Command> {
-  const { listBundledPackageChannelMetadata } = await bundledPackageChannelMetadataLoader.load();
+  const { listPackageChannelMetadata } = await bundledPackageChannelMetadataLoader.load();
   const seenFlags = new Set(command.options.map((option) => option.flags));
-  const channels = listBundledPackageChannelMetadata().toSorted((left, right) => {
+  const channels = listPackageChannelMetadata().toSorted((left, right) => {
     const leftOrder = left.order ?? Number.MAX_SAFE_INTEGER;
     const rightOrder = right.order ?? Number.MAX_SAFE_INTEGER;
     return leftOrder === rightOrder
@@ -85,7 +91,8 @@ async function addChannelSetupOptions(command: Command): Promise<Command> {
       : leftOrder - rightOrder;
   });
   for (const channel of channels) {
-    for (const option of channel.cliAddOptions ?? []) {
+    const setupOptions = channel.setup?.fields.map((field) => field.cli) ?? [];
+    for (const option of [...setupOptions, ...(channel.cliAddOptions ?? [])]) {
       if (seenFlags.has(option.flags)) {
         continue;
       }
@@ -94,6 +101,10 @@ async function addChannelSetupOptions(command: Command): Promise<Command> {
         command.option(option.flags, option.description, option.defaultValue);
       } else {
         command.option(option.flags, option.description);
+      }
+      if (option.negatedFlags && !seenFlags.has(option.negatedFlags)) {
+        seenFlags.add(option.negatedFlags);
+        command.option(option.negatedFlags, option.description);
       }
     }
   }
@@ -287,9 +298,13 @@ export async function registerChannelsCli(
         command,
         getOptionNames(command).filter((name) => !CHANNEL_ADD_SELECTION_OPTION_NAMES.has(name)),
       );
-      await channelsAddCommand(resolveChannelsAddOptions(channelArg, opts), defaultRuntime, {
-        hasFlags,
-      });
+      await channelsAddCommand(
+        resolveChannelsAddOptions(channelArg, opts, command),
+        defaultRuntime,
+        {
+          hasFlags,
+        },
+      );
     });
   });
 

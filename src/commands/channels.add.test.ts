@@ -2,6 +2,7 @@
 import { beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 import { getBundledChannelSetupPlugin } from "../channels/plugins/bundled.js";
 import type { ChannelPluginCatalogEntry } from "../channels/plugins/catalog.js";
+import { defineChannelSetupContract } from "../channels/plugins/setup-contract.js";
 import type { ChannelPlugin } from "../channels/plugins/types.public.js";
 import type { OpenClawConfig } from "../config/types.openclaw.js";
 import type { PluginInstallRecord } from "../config/types.plugins.js";
@@ -583,6 +584,12 @@ describe("channelsAddCommand", () => {
   });
 
   it("maps legacy Nextcloud Talk add flags to setup input fields", async () => {
+    const prepareAccountConfigInput = vi.fn(({ input }) => ({
+      ...input,
+      baseUrl: input.baseUrl ?? input.url,
+      secret: input.secret ?? input.token ?? input.password,
+      secretFile: input.secretFile ?? input.tokenFile,
+    }));
     const applyAccountConfig = vi.fn(({ cfg, input }) => ({
       ...cfg,
       channels: {
@@ -604,7 +611,7 @@ describe("channelsAddCommand", () => {
               id: "nextcloud-talk",
               label: "Nextcloud Talk",
             }),
-            setup: { applyAccountConfig },
+            setup: { prepareAccountConfigInput, applyAccountConfig },
           },
           source: "test",
         },
@@ -712,6 +719,88 @@ describe("channelsAddCommand", () => {
         },
       },
     });
+  });
+
+  it("uses channel-owned setup parsing for bundled plugins", async () => {
+    const applyAccountConfig = vi.fn(({ cfg, input }) => ({
+      ...cfg,
+      channels: {
+        ...cfg.channels,
+        "typed-chat": {
+          token: input.token,
+          port: input.port,
+        },
+      },
+    }));
+    setActivePluginRegistry(
+      createTestRegistry([
+        {
+          pluginId: "typed-chat",
+          plugin: {
+            ...createChannelTestPluginBase({ id: "typed-chat", label: "Typed Chat" }),
+            setupContract: defineChannelSetupContract({
+              fields: {
+                token: {
+                  kind: "string",
+                  cli: { flags: "--token <token>", description: "Bot token" },
+                },
+                port: {
+                  kind: "integer",
+                  cli: { flags: "--port <port>", description: "HTTP port" },
+                },
+              },
+              adapter: { applyAccountConfig },
+            }),
+          } as ChannelPlugin,
+          source: "test",
+        },
+      ]),
+    );
+    configMocks.readConfigFileSnapshot.mockResolvedValue({ ...baseConfigSnapshot });
+
+    await channelsAddCommand({ channel: "typed-chat", token: "secret", port: "8080" }, runtime, {
+      hasFlags: true,
+    });
+
+    expect(writtenChannel("typed-chat")).toEqual({ token: "secret", port: 8080 });
+    expect(applyAccountConfig).toHaveBeenCalledWith({
+      cfg: baseConfigSnapshot.config,
+      accountId: "default",
+      input: { token: "secret", port: 8080 },
+    });
+  });
+
+  it("reports options that do not belong to the selected channel contract", async () => {
+    const applyAccountConfig = vi.fn(({ cfg }) => cfg);
+    setActivePluginRegistry(
+      createTestRegistry([
+        {
+          pluginId: "typed-chat",
+          plugin: {
+            ...createChannelTestPluginBase({ id: "typed-chat", label: "Typed Chat" }),
+            setupContract: defineChannelSetupContract({
+              fields: {
+                token: {
+                  kind: "string",
+                  cli: { flags: "--token <token>", description: "Bot token" },
+                },
+              },
+              adapter: { applyAccountConfig },
+            }),
+          } as ChannelPlugin,
+          source: "test",
+        },
+      ]),
+    );
+    configMocks.readConfigFileSnapshot.mockResolvedValue({ ...baseConfigSnapshot });
+
+    await channelsAddCommand({ channel: "typed-chat", signalTransport: "container" }, runtime, {
+      hasFlags: true,
+    });
+
+    expect(runtime.error).toHaveBeenCalledWith("Unsupported setup option: signalTransport");
+    expect(runtime.exit).toHaveBeenCalledWith(1);
+    expect(applyAccountConfig).not.toHaveBeenCalled();
   });
 
   it("prepares setup input before validation, config writes, and post-write hooks", async () => {

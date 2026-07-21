@@ -1,3 +1,4 @@
+import { defineChannelSetupContract } from "openclaw/plugin-sdk/channel-setup";
 // Googlechat plugin module implements setup core behavior.
 import {
   createPatchedAccountSetupAdapter,
@@ -38,4 +39,41 @@ export const googlechatSetupAdapter = createPatchedAccountSetupAdapter({
       ...(webhookUrl ? { webhookUrl } : {}),
     };
   },
+});
+
+export const googlechatSetupContract = defineChannelSetupContract({
+  fields: {
+    token: {
+      kind: "string",
+      sensitive: true,
+      cli: { flags: "--token <json>", description: "Google Chat service account JSON" },
+    },
+    tokenFile: {
+      kind: "string",
+      sensitive: true,
+      cli: { flags: "--token-file <path>", description: "Google Chat service account file" },
+    },
+    audienceType: {
+      kind: "choice",
+      choices: ["app-url", "project-number"],
+      cli: { flags: "--audience-type <type>", description: "Google Chat audience type" },
+    },
+    audience: {
+      kind: "string",
+      cli: { flags: "--audience <value>", description: "Google Chat audience value" },
+    },
+    webhookPath: {
+      kind: "string",
+      cli: { flags: "--webhook-path <path>", description: "Google Chat webhook path" },
+    },
+    webhookUrl: {
+      kind: "string",
+      cli: { flags: "--webhook-url <url>", description: "Google Chat webhook URL" },
+    },
+    useEnv: {
+      kind: "boolean",
+      cli: { flags: "--use-env", description: "Use Google Chat environment credentials" },
+    },
+  },
+  legacyAdapter: googlechatSetupAdapter,
 });

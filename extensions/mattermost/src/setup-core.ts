@@ -1,6 +1,9 @@
 // Mattermost plugin module implements setup core behavior.
 import { DEFAULT_ACCOUNT_ID, normalizeAccountId } from "openclaw/plugin-sdk/account-id";
-import type { ChannelSetupAdapter } from "openclaw/plugin-sdk/channel-setup";
+import {
+  defineChannelSetupContract,
+  type ChannelSetupAdapter,
+} from "openclaw/plugin-sdk/channel-setup";
 import type { OpenClawConfig } from "openclaw/plugin-sdk/config-contracts";
 import {
   applyAccountNameToChannelSection,
@@ -107,3 +110,27 @@ export const mattermostSetupAdapter: ChannelSetupAdapter = {
     });
   },
 };
+
+export const mattermostSetupContract = defineChannelSetupContract({
+  fields: {
+    token: {
+      kind: "string",
+      sensitive: true,
+      cli: { flags: "--token <token>", description: "Mattermost bot token" },
+    },
+    botToken: {
+      kind: "string",
+      sensitive: true,
+      cli: { flags: "--bot-token <token>", description: "Mattermost bot token" },
+    },
+    httpUrl: {
+      kind: "string",
+      cli: { flags: "--http-url <url>", description: "Mattermost server URL" },
+    },
+    useEnv: {
+      kind: "boolean",
+      cli: { flags: "--use-env", description: "Use Mattermost environment credentials" },
+    },
+  },
+  legacyAdapter: mattermostSetupAdapter,
+});

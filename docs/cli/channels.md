@@ -86,7 +86,11 @@ openclaw channels remove --channel telegram --delete
 `channels remove` only operates on installed/configured channel plugins. Use `channels add` first for installable catalog channels. Without `--delete` it asks to disable the account and keeps its config; `--delete` removes the config entries without prompting.
 For runtime-backed channel plugins, `channels remove` also asks the running Gateway to stop the selected account before it updates config, so disabling or deleting an account does not leave the old listener active until restart.
 
-Non-interactive add flags shared across channels: `--account <id>`, `--name <name>`, `--token`, `--token-file`, `--bot-token`, `--app-token`, `--secret`, `--secret-file`, `--password`, `--cli-path`, `--url`, `--base-url`, `--http-url`, `--auth-dir`, and `--use-env` (env-backed auth, default account only, where supported). Channel-specific flags include:
+The shared control envelope contains only `--channel`, `--account`, and the optional account display `--name`. Each modern channel plugin owns its credential, transport, and provider-specific semantics. `openclaw channels add --help` builds those options from bundled and installed plugin package metadata without loading channel runtime code.
+
+Common-looking flags such as `--token`, `--url`, or `--use-env` are still channel-owned when a modern contract handles them. Core continues to register the released compatibility flag set for third-party plugins that still use the legacy shared setup adapter; a modern selected channel rejects compatibility flags it did not declare.
+
+Examples of channel-owned flags include:
 
 | Channel     | Flags                                                                                                |
 | ----------- | ---------------------------------------------------------------------------------------------------- |
@@ -94,11 +98,13 @@ Non-interactive add flags shared across channels: `--account <id>`, `--name <nam
 | iMessage    | `--cli-path`, `--db-path`, `--service`, `--region`                                                   |
 | Matrix      | `--homeserver`, `--user-id`, `--access-token`, `--password`, `--device-name`, `--initial-sync-limit` |
 | Nostr       | `--private-key`, `--relay-urls`                                                                      |
-| Signal      | `--signal-number`, `--cli-path`, `--http-url`, `--http-host`, `--http-port`                          |
+| Signal      | `--signal-number`, `--signal-transport`, `--cli-path`, `--http-url`, `--http-host`, `--http-port`    |
 | Tlon        | `--ship`, `--url`, `--code`, `--group-channels`, `--dm-allowlist`, `--auto-discover-channels`        |
 | WhatsApp    | `--auth-dir`                                                                                         |
 
 If a channel plugin needs to be installed during a flag-driven add command, OpenClaw uses the channel's default install source without opening the interactive plugin install prompt.
+
+Both guided setup and flag-driven setup pass through the selected channel's parser, validation, account resolution, config writer, and post-write hooks. Unsupported flags fail with the owning channel's setup error instead of being accepted through a global input bag.
 
 When you run `openclaw channels add` with no direct account, credential, or channel-config flags, the interactive wizard can prompt. A positional channel id and `--channel <id>` both preselect that channel without bypassing guidance:
 

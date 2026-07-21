@@ -1,8 +1,8 @@
+import { normalizeOptionalAccountId } from "openclaw/plugin-sdk/account-id";
 /**
  * Twitch setup wizard surface for CLI setup.
  */
-
-import { normalizeOptionalAccountId } from "openclaw/plugin-sdk/account-id";
+import { defineChannelSetupContract } from "openclaw/plugin-sdk/channel-setup";
 import { getChatChannelMeta, type ChannelPlugin } from "openclaw/plugin-sdk/core";
 import {
   formatDocsLink,
@@ -394,6 +394,11 @@ export const twitchSetupAdapter: ChannelSetupAdapter = {
     ),
 };
 
+export const twitchSetupContract = defineChannelSetupContract({
+  fields: {},
+  legacyAdapter: twitchSetupAdapter,
+});
+
 export const twitchSetupWizard: ChannelSetupWizard = {
   channel,
   resolveAccountIdForConfigure: ({ cfg, accountOverride }) =>
@@ -510,5 +515,6 @@ export const twitchSetupPlugin: ChannelPlugin<ResolvedTwitchAccount> = {
     isEnabled: (account) => account.enabled !== false,
   },
   setup: twitchSetupAdapter,
+  setupContract: twitchSetupContract,
   setupWizard: twitchSetupWizard,
 };

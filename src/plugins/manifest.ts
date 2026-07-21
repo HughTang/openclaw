@@ -2065,6 +2065,8 @@ export function loadPluginManifest(
 }
 
 // package.json "openclaw" metadata (used for setup/catalog)
+import type { ChannelSetupMetadata } from "../channels/plugins/setup-contract.js";
+
 type PluginPackageChannelApprovalFlag = "native";
 
 export type PluginPackageChannel = {
@@ -2107,6 +2109,9 @@ export type PluginPackageChannel = {
     exportName?: string;
   };
   doctorCapabilities?: PluginPackageChannelDoctorCapabilities;
+  /** Typed, serializable setup fields available before plugin runtime load. */
+  setup?: ChannelSetupMetadata;
+  /** @deprecated Use setup.fields. */
   cliAddOptions?: readonly PluginPackageChannelCliOption[];
 };
 
@@ -2119,6 +2124,7 @@ export type PluginPackageChannelDoctorCapabilities = {
 
 type PluginPackageChannelCliOption = {
   flags: string;
+  negatedFlags?: string;
   description: string;
   defaultValue?: boolean | string;
 };

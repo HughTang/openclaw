@@ -47,7 +47,8 @@
       "blurb": "Twitch chat integration",
       "aliases": [
         "twitch-chat"
-      ]
+      ],
+      "setup": { "fields": [] }
     },
     "release": {
       "publishToClawHub": true,

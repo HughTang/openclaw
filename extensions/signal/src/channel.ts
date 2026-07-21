@@ -46,7 +46,7 @@ import { resolveSignalOutboundTarget } from "./outbound-session.js";
 import { materializeSignalPresentationFallback } from "./presentation-fallback.js";
 import { resolveSignalReactionLevel } from "./reaction-level.js";
 import { resolveSignalReplyContextWithPersistence } from "./reply-authors.js";
-import { signalSetupAdapter } from "./setup-core.js";
+import { signalSetupContract } from "./setup-core.js";
 import {
   createSignalPluginBase,
   signalConfigAdapter,
@@ -482,7 +482,7 @@ export const signalPlugin: ChannelPlugin<ResolvedSignalAccount, SignalProbe> =
     base: {
       ...createSignalPluginBase({
         setupWizard: signalSetupWizard,
-        setup: signalSetupAdapter,
+        setupContract: signalSetupContract,
       }),
       actions: signalMessageActions,
       approvalCapability: signalApprovalCapability,

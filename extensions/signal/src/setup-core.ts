@@ -1,6 +1,6 @@
 // Signal plugin module implements setup core behavior.
 import { normalizeAccountId, resolveAccountEntry } from "openclaw/plugin-sdk/account-resolution";
-import type { ChannelSetupInput } from "openclaw/plugin-sdk/setup";
+import { defineChannelSetupContract } from "openclaw/plugin-sdk/channel-setup";
 import {
   createCliPathTextInput,
   createDelegatedSetupWizardProxy,
@@ -40,6 +40,47 @@ import { normalizeSignalTransportHost, normalizeSignalTransportUrl } from "./tra
 const t = createSetupTranslator();
 
 const channel = "signal" as const;
+
+const signalSetupFields = {
+  signalNumber: {
+    kind: "string",
+    cli: { flags: "--signal-number <e164>", description: "Signal account number (E.164)" },
+  },
+  signalTransport: {
+    kind: "choice",
+    choices: ["external-native", "container"],
+    cli: {
+      flags: "--signal-transport <kind>",
+      description: "Signal HTTP transport (external-native or container)",
+    },
+  },
+  cliPath: {
+    kind: "string",
+    cli: { flags: "--cli-path <path>", description: "signal-cli executable path" },
+  },
+  httpUrl: {
+    kind: "string",
+    cli: { flags: "--http-url <url>", description: "Signal HTTP service URL" },
+  },
+  httpHost: {
+    kind: "string",
+    cli: { flags: "--http-host <host>", description: "Signal HTTP daemon host" },
+  },
+  httpPort: {
+    kind: "string",
+    cli: { flags: "--http-port <port>", description: "Signal HTTP daemon port" },
+  },
+} as const;
+
+type SignalSetupInput = {
+  name?: string;
+  signalNumber?: string;
+  signalTransport?: "external-native" | "container";
+  cliPath?: string;
+  httpUrl?: string;
+  httpHost?: string;
+  httpPort?: string;
+};
 const MIN_E164_DIGITS = 5;
 const MAX_E164_DIGITS = 15;
 const DIGITS_ONLY = /^\d+$/;
@@ -92,7 +133,7 @@ function parseSignalAllowFromEntries(raw: string): { entries: string[]; error?: 
   });
 }
 
-function buildSignalSetupPatch(input: ChannelSetupInput) {
+function buildSignalSetupPatch(input: SignalSetupInput) {
   const transport = input.httpUrl
     ? {
         // Bare --http-url historically meant an already-running native daemon.
@@ -115,7 +156,7 @@ function buildSignalSetupPatch(input: ChannelSetupInput) {
 }
 
 function managedTransportOverridesFromSetupInput(
-  input: ChannelSetupInput,
+  input: SignalSetupInput,
 ): Omit<Extract<SignalTransportConfig, { kind: "managed-native" }>, "kind"> {
   return {
     ...(input.cliPath ? { cliPath: input.cliPath } : {}),
@@ -265,9 +306,9 @@ export const signalCompletionNote = {
   ],
 };
 
-const signalSetupAdapterBase = createPatchedAccountSetupAdapter({
+const signalSetupAdapterBase = createPatchedAccountSetupAdapter<SignalSetupInput>({
   channelKey: channel,
-  validateInput: createSetupInputPresenceValidator({
+  validateInput: createSetupInputPresenceValidator<SignalSetupInput>({
     validate: ({ cfg, accountId, input }) => {
       if (
         input.signalTransport &&
@@ -337,7 +378,7 @@ function restorePromotedSignalDefaultAccount(cfg: OpenClawConfig): OpenClawConfi
   };
 }
 
-export const signalSetupAdapter: ChannelSetupAdapter = {
+export const signalSetupAdapter: ChannelSetupAdapter<SignalSetupInput> = {
   ...signalSetupAdapterBase,
   applyAccountConfig: (params) => {
     const accountId = normalizeAccountId(params.accountId);
@@ -372,6 +413,11 @@ export const signalSetupAdapter: ChannelSetupAdapter = {
     });
   },
 };
+
+export const signalSetupContract = defineChannelSetupContract({
+  fields: signalSetupFields,
+  adapter: signalSetupAdapter,
+});
 
 export function createSignalSetupWizardProxy(loadWizard: () => Promise<ChannelSetupWizard>) {
   return createDelegatedSetupWizardProxy({

@@ -81,7 +81,7 @@ export const signalSecurityAdapter = createRestrictSendersChannelSecurity<Resolv
 
 export function createSignalPluginBase(params: {
   setupWizard?: NonNullable<ChannelPlugin<ResolvedSignalAccount>["setupWizard"]>;
-  setup: NonNullable<ChannelPlugin<ResolvedSignalAccount>["setup"]>;
+  setupContract: NonNullable<ChannelPlugin<ResolvedSignalAccount>["setupContract"]>;
 }): Pick<
   ChannelPlugin<ResolvedSignalAccount>,
   | "id"
@@ -93,11 +93,11 @@ export function createSignalPluginBase(params: {
   | "configSchema"
   | "config"
   | "security"
-  | "setup"
+  | "setupContract"
   | "messaging"
   | "doctor"
 > {
-  const base = createChannelPluginBase({
+  const base = createChannelPluginBase<ResolvedSignalAccount>({
     id: SIGNAL_CHANNEL,
     meta: {
       ...getChatChannelMeta(SIGNAL_CHANNEL),
@@ -127,7 +127,7 @@ export function createSignalPluginBase(params: {
         }),
     },
     security: signalSecurityAdapter,
-    setup: params.setup,
+    setupContract: params.setupContract,
   });
   return {
     ...base,
@@ -145,7 +145,7 @@ export function createSignalPluginBase(params: {
     | "configSchema"
     | "config"
     | "security"
-    | "setup"
+    | "setupContract"
     | "messaging"
     | "doctor"
   >;

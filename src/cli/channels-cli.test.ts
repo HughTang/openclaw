@@ -3,7 +3,7 @@ import { Command } from "commander";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import type { PluginPackageChannel } from "../plugins/manifest.js";
 import { mockProcessPlatform } from "../test-utils/vitest-spies.js";
-import { registerChannelsCli } from "./channels-cli.js";
+import { registerChannelsCli, resolveChannelsAddOptions } from "./channels-cli.js";
 
 const listBundledPackageChannelMetadataMock = vi.hoisted(() =>
   vi.fn<() => readonly PluginPackageChannel[]>(() => []),
@@ -17,6 +17,7 @@ const runtimeMock = vi.hoisted(() => ({
 
 vi.mock("../plugins/bundled-package-channel-metadata.js", () => ({
   listBundledPackageChannelMetadata: listBundledPackageChannelMetadataMock,
+  listPackageChannelMetadata: listBundledPackageChannelMetadataMock,
 }));
 
 vi.mock("../commands/channels.js", () => ({
@@ -97,6 +98,61 @@ describe("registerChannelsCli", () => {
 
     expect(getChannelAddOptionFlags(program)).toContain("--code <code>");
     expect(getChannelAddOptionFlags(program)).toContain("--workspace <workspace>");
+  });
+
+  it("projects channel-owned setup fields into Commander options", async () => {
+    listBundledPackageChannelMetadataMock.mockReturnValueOnce([
+      {
+        id: "signal",
+        setup: {
+          fields: [
+            {
+              key: "signalTransport",
+              kind: "choice",
+              choices: ["external-native", "container"],
+              cli: {
+                flags: "--signal-transport <kind>",
+                description: "Signal transport kind",
+              },
+            },
+            {
+              key: "autoDiscover",
+              kind: "boolean",
+              cli: {
+                flags: "--auto-discover",
+                negatedFlags: "--no-auto-discover",
+                description: "Discover channels automatically",
+              },
+            },
+          ],
+        },
+      },
+    ]);
+    process.argv = ["node", "openclaw", "channels", "add", "--help"];
+    const program = new Command().name("openclaw");
+
+    await registerChannelsCli(program);
+
+    expect(getChannelAddOptionFlags(program)).toContain("--signal-transport <kind>");
+    expect(getChannelAddOptionFlags(program)).toContain("--no-auto-discover");
+  });
+
+  it("forwards only explicitly supplied setup options", () => {
+    const sources = new Map<string, "cli" | "default">([
+      ["channel", "cli"],
+      ["signalTransport", "cli"],
+      ["useEnv", "default"],
+    ]);
+
+    expect(
+      resolveChannelsAddOptions(
+        undefined,
+        { channel: "signal", signalTransport: "container", useEnv: false },
+        {
+          getOptionValueSource: (key) => sources.get(key),
+        } as Pick<Command, "getOptionValueSource">,
+      ),
+    ).toEqual({ channel: "signal", signalTransport: "container" });
   });
 
   it("uses caller argv instead of raw process argv for channel-specific add options", async () => {

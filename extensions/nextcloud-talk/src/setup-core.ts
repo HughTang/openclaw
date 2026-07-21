@@ -1,5 +1,9 @@
 // Nextcloud Talk plugin module implements setup core behavior.
-import type { ChannelSetupAdapter, ChannelSetupInput } from "openclaw/plugin-sdk/channel-setup";
+import {
+  defineChannelSetupContract,
+  type ChannelSetupAdapter,
+  type ChannelSetupInput,
+} from "openclaw/plugin-sdk/channel-setup";
 import type { OpenClawConfig } from "openclaw/plugin-sdk/config-contracts";
 import { DEFAULT_ACCOUNT_ID, normalizeAccountId } from "openclaw/plugin-sdk/routing";
 import {
@@ -204,6 +208,12 @@ export const nextcloudTalkDmPolicy: ChannelSetupDmPolicy = {
 
 export const nextcloudTalkSetupAdapter: ChannelSetupAdapter = {
   resolveAccountId: ({ accountId }) => normalizeAccountId(accountId),
+  prepareAccountConfigInput: ({ input }) => ({
+    ...input,
+    baseUrl: input.baseUrl ?? input.url,
+    secret: input.secret ?? input.token ?? input.password,
+    secretFile: input.secretFile ?? input.tokenFile,
+  }),
   applyAccountName: ({ cfg, accountId, name }) =>
     applyAccountNameToChannelSection({
       cfg,
@@ -252,3 +262,46 @@ export const nextcloudTalkSetupAdapter: ChannelSetupAdapter = {
     return setNextcloudTalkAccountConfig(next as CoreConfig, accountId, patch);
   },
 };
+
+export const nextcloudTalkSetupContract = defineChannelSetupContract({
+  fields: {
+    baseUrl: {
+      kind: "string",
+      cli: { flags: "--base-url <url>", description: "Nextcloud base URL" },
+    },
+    url: {
+      kind: "string",
+      cli: { flags: "--url <url>", description: "Legacy Nextcloud base URL alias" },
+    },
+    secret: {
+      kind: "string",
+      sensitive: true,
+      cli: { flags: "--secret <secret>", description: "Nextcloud Talk bot secret" },
+    },
+    token: {
+      kind: "string",
+      sensitive: true,
+      cli: { flags: "--token <secret>", description: "Legacy Nextcloud bot secret alias" },
+    },
+    password: {
+      kind: "string",
+      sensitive: true,
+      cli: { flags: "--password <secret>", description: "Legacy Nextcloud bot secret alias" },
+    },
+    secretFile: {
+      kind: "string",
+      sensitive: true,
+      cli: { flags: "--secret-file <path>", description: "Nextcloud Talk bot secret file" },
+    },
+    tokenFile: {
+      kind: "string",
+      sensitive: true,
+      cli: { flags: "--token-file <path>", description: "Legacy Nextcloud bot secret file alias" },
+    },
+    useEnv: {
+      kind: "boolean",
+      cli: { flags: "--use-env", description: "Use Nextcloud Talk environment credentials" },
+    },
+  },
+  legacyAdapter: nextcloudTalkSetupAdapter,
+});

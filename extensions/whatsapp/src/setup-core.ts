@@ -1,3 +1,4 @@
+import { defineChannelSetupContract } from "openclaw/plugin-sdk/channel-setup";
 // Whatsapp plugin module implements setup core behavior.
 import {
   applyAccountNameToChannelSection,
@@ -51,3 +52,13 @@ export const whatsappSetupAdapter: ChannelSetupAdapter = {
     };
   },
 };
+
+export const whatsappSetupContract = defineChannelSetupContract({
+  fields: {
+    authDir: {
+      kind: "string",
+      cli: { flags: "--auth-dir <path>", description: "WhatsApp auth directory override" },
+    },
+  },
+  legacyAdapter: whatsappSetupAdapter,
+});
