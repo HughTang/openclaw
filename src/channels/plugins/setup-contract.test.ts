@@ -15,7 +15,10 @@ describe("defineChannelSetupContract", () => {
           allowFrom?: string[];
           useEnv?: boolean;
         };
-      }) => ({ token: input.token }),
+      }) => {
+        void input.token;
+        return {};
+      },
     );
     const contract = defineChannelSetupContract({
       fields: {
@@ -71,7 +74,7 @@ describe("defineChannelSetupContract", () => {
     }
     expect(
       contract.applyAccountConfig({ cfg: {}, accountId: "default", input: parsed.value }),
-    ).toEqual({ token: "secret" });
+    ).toEqual({});
     expect(applyAccountConfig).toHaveBeenCalledWith({
       cfg: {},
       accountId: "default",
