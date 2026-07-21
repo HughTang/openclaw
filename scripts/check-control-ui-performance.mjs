@@ -12,11 +12,10 @@ const KIB = 1024;
 export const CONTROL_UI_PERFORMANCE_BUDGETS = Object.freeze({
   startupJsRequests: 18,
   startupCssRequests: 1,
-  // 313 KiB accompanies the widget sandbox-origin diagnostics (2026-07): the
-  // startup catalog gained the operator hint strings and main sat within
-  // ~0.1 KiB of the previous ceiling, failing source builds whose zlib packs
-  // slightly worse than CI's. One KiB restores explicit headroom.
-  startupJsGzipBytes: 313 * KIB,
+  // 314 KiB accompanies the widget sandbox-origin and provider-usage locale
+  // parity refresh (2026-07). One KiB keeps explicit zlib headroom while the
+  // request count and largest-chunk ceilings still guard startup shape.
+  startupJsGzipBytes: 314 * KIB,
   // 45 KiB CSS ceilings maintainer-approved 2026-07 alongside the interleaved
   // sidebar zone styling; headroom over the ~36.5 KiB post-diet baseline.
   startupCssGzipBytes: 45 * KIB,
