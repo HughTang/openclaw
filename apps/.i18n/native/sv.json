@@ -13399,14 +13399,24 @@
       "translated": "Kopplade Gateways"
     },
     {
-      "id": "native.apple.9a6bd720a544ec04",
-      "source": "Switch gateways without pairing again.",
-      "translated": "Byt gateway utan att koppla igen."
+      "id": "native.apple.0c5dae9bc264aaa1",
+      "source": "Keep multiple gateways connected and switch which one is in focus.",
+      "translated": "Håll flera gateways anslutna och växla vilken som är i fokus."
     },
     {
-      "id": "native.apple.5f33cfe2d21e6dc6",
-      "source": "Active Gateway",
-      "translated": "Aktiv Gateway"
+      "id": "native.apple.a1d2ffbfe64ef4ce",
+      "source": "Focused Gateway",
+      "translated": "Gateway i fokus"
+    },
+    {
+      "id": "native.apple.f819d2ea384fe6ed",
+      "source": "Disconnect Gateway",
+      "translated": "Koppla från Gateway"
+    },
+    {
+      "id": "native.apple.10d41627b8261536",
+      "source": "Keep Gateway Connected",
+      "translated": "Håll Gateway ansluten"
     },
     {
       "id": "native.apple.4e1792b1044ec4a9",
@@ -14387,6 +14397,11 @@
       "id": "native.apple.f21a8e304b607dc8",
       "source": "Copy",
       "translated": "Kopiera"
+    },
+    {
+      "id": "native.apple.7896bc893de41eae",
+      "source": "Reconnecting…",
+      "translated": "Återansluter…"
     },
     {
       "id": "native.apple.760dbcb0180666e1",
@@ -19739,6 +19754,11 @@
       "translated": "Kritisk"
     },
     {
+      "id": "native.apple.130664b1dd61cbbf",
+      "source": "New Gateway Window…",
+      "translated": "Nytt Gateway-fönster…"
+    },
+    {
       "id": "native.apple.13f96467014cf344",
       "source": "New Thread",
       "translated": "Ny tråd"
@@ -23067,6 +23087,11 @@
       "id": "native.apple.26960f2b7ebad5f9",
       "source": "Voice wake detected!",
       "translated": "Röstväckning detekterad!"
+    },
+    {
+      "id": "native.apple.93ad62dac611bdcd",
+      "source": "Talk mode uses the primary Gateway window",
+      "translated": "Talläget använder det primära Gateway-fönstret"
     },
     {
       "id": "native.apple.282d11786f2f4c4b",

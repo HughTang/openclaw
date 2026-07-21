@@ -13399,14 +13399,24 @@
       "translated": "Gateways appairés"
     },
     {
-      "id": "native.apple.9a6bd720a544ec04",
-      "source": "Switch gateways without pairing again.",
-      "translated": "Changez de gateway sans réappairer."
+      "id": "native.apple.0c5dae9bc264aaa1",
+      "source": "Keep multiple gateways connected and switch which one is in focus.",
+      "translated": "Gardez plusieurs Gateway connectés et choisissez celui sur lequel vous souhaitez vous concentrer."
     },
     {
-      "id": "native.apple.5f33cfe2d21e6dc6",
-      "source": "Active Gateway",
+      "id": "native.apple.a1d2ffbfe64ef4ce",
+      "source": "Focused Gateway",
       "translated": "Gateway actif"
+    },
+    {
+      "id": "native.apple.f819d2ea384fe6ed",
+      "source": "Disconnect Gateway",
+      "translated": "Déconnecter le Gateway"
+    },
+    {
+      "id": "native.apple.10d41627b8261536",
+      "source": "Keep Gateway Connected",
+      "translated": "Garder le Gateway connecté"
     },
     {
       "id": "native.apple.4e1792b1044ec4a9",
@@ -14387,6 +14397,11 @@
       "id": "native.apple.f21a8e304b607dc8",
       "source": "Copy",
       "translated": "Copier"
+    },
+    {
+      "id": "native.apple.7896bc893de41eae",
+      "source": "Reconnecting…",
+      "translated": "Reconnexion…"
     },
     {
       "id": "native.apple.760dbcb0180666e1",
@@ -19739,6 +19754,11 @@
       "translated": "Critique"
     },
     {
+      "id": "native.apple.130664b1dd61cbbf",
+      "source": "New Gateway Window…",
+      "translated": "Nouvelle fenêtre Gateway…"
+    },
+    {
       "id": "native.apple.13f96467014cf344",
       "source": "New Thread",
       "translated": "Nouveau fil de discussion"
@@ -23067,6 +23087,11 @@
       "id": "native.apple.26960f2b7ebad5f9",
       "source": "Voice wake detected!",
       "translated": "Activation vocale détectée !"
+    },
+    {
+      "id": "native.apple.93ad62dac611bdcd",
+      "source": "Talk mode uses the primary Gateway window",
+      "translated": "Le mode conversation utilise la fenêtre Gateway principale"
     },
     {
       "id": "native.apple.282d11786f2f4c4b",

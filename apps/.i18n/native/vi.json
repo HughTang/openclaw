@@ -13399,14 +13399,24 @@
       "translated": "Gateway đã ghép nối"
     },
     {
-      "id": "native.apple.9a6bd720a544ec04",
-      "source": "Switch gateways without pairing again.",
-      "translated": "Chuyển gateway mà không cần ghép nối lại."
+      "id": "native.apple.0c5dae9bc264aaa1",
+      "source": "Keep multiple gateways connected and switch which one is in focus.",
+      "translated": "Duy trì kết nối với nhiều Gateway và chuyển đổi Gateway đang được chọn."
     },
     {
-      "id": "native.apple.5f33cfe2d21e6dc6",
-      "source": "Active Gateway",
-      "translated": "Gateway đang hoạt động"
+      "id": "native.apple.a1d2ffbfe64ef4ce",
+      "source": "Focused Gateway",
+      "translated": "Gateway đang được chọn"
+    },
+    {
+      "id": "native.apple.f819d2ea384fe6ed",
+      "source": "Disconnect Gateway",
+      "translated": "Ngắt kết nối Gateway"
+    },
+    {
+      "id": "native.apple.10d41627b8261536",
+      "source": "Keep Gateway Connected",
+      "translated": "Duy trì kết nối Gateway"
     },
     {
       "id": "native.apple.4e1792b1044ec4a9",
@@ -14387,6 +14397,11 @@
       "id": "native.apple.f21a8e304b607dc8",
       "source": "Copy",
       "translated": "Sao chép"
+    },
+    {
+      "id": "native.apple.7896bc893de41eae",
+      "source": "Reconnecting…",
+      "translated": "Đang kết nối lại…"
     },
     {
       "id": "native.apple.760dbcb0180666e1",
@@ -19739,6 +19754,11 @@
       "translated": "Nghiêm trọng"
     },
     {
+      "id": "native.apple.130664b1dd61cbbf",
+      "source": "New Gateway Window…",
+      "translated": "Cửa sổ Gateway mới…"
+    },
+    {
       "id": "native.apple.13f96467014cf344",
       "source": "New Thread",
       "translated": "Chuỗi mới"
@@ -23067,6 +23087,11 @@
       "id": "native.apple.26960f2b7ebad5f9",
       "source": "Voice wake detected!",
       "translated": "Đã phát hiện đánh thức bằng giọng nói!"
+    },
+    {
+      "id": "native.apple.93ad62dac611bdcd",
+      "source": "Talk mode uses the primary Gateway window",
+      "translated": "Chế độ trò chuyện sử dụng cửa sổ Gateway chính"
     },
     {
       "id": "native.apple.282d11786f2f4c4b",

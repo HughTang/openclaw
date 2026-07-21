@@ -13399,14 +13399,24 @@
       "translated": "ペアリング済みのGateway"
     },
     {
-      "id": "native.apple.9a6bd720a544ec04",
-      "source": "Switch gateways without pairing again.",
-      "translated": "再度ペアリングせずにGatewayを切り替えます。"
+      "id": "native.apple.0c5dae9bc264aaa1",
+      "source": "Keep multiple gateways connected and switch which one is in focus.",
+      "translated": "複数のGatewayへの接続を維持し、フォーカスするGatewayを切り替えます。"
     },
     {
-      "id": "native.apple.5f33cfe2d21e6dc6",
-      "source": "Active Gateway",
-      "translated": "アクティブなGateway"
+      "id": "native.apple.a1d2ffbfe64ef4ce",
+      "source": "Focused Gateway",
+      "translated": "フォーカス中のGateway"
+    },
+    {
+      "id": "native.apple.f819d2ea384fe6ed",
+      "source": "Disconnect Gateway",
+      "translated": "Gatewayの接続を解除"
+    },
+    {
+      "id": "native.apple.10d41627b8261536",
+      "source": "Keep Gateway Connected",
+      "translated": "Gatewayの接続を維持"
     },
     {
       "id": "native.apple.4e1792b1044ec4a9",
@@ -14387,6 +14397,11 @@
       "id": "native.apple.f21a8e304b607dc8",
       "source": "Copy",
       "translated": "コピー"
+    },
+    {
+      "id": "native.apple.7896bc893de41eae",
+      "source": "Reconnecting…",
+      "translated": "再接続中…"
     },
     {
       "id": "native.apple.760dbcb0180666e1",
@@ -19739,6 +19754,11 @@
       "translated": "Critical"
     },
     {
+      "id": "native.apple.130664b1dd61cbbf",
+      "source": "New Gateway Window…",
+      "translated": "新しいGatewayウインドウ…"
+    },
+    {
       "id": "native.apple.13f96467014cf344",
       "source": "New Thread",
       "translated": "新規スレッド"
@@ -23067,6 +23087,11 @@
       "id": "native.apple.26960f2b7ebad5f9",
       "source": "Voice wake detected!",
       "translated": "音声ウェイクを検出しました!"
+    },
+    {
+      "id": "native.apple.93ad62dac611bdcd",
+      "source": "Talk mode uses the primary Gateway window",
+      "translated": "トークモードではプライマリGatewayウインドウを使用します"
     },
     {
       "id": "native.apple.282d11786f2f4c4b",
