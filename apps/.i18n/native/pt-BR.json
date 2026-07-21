@@ -1564,6 +1564,11 @@
       "translated": "${days} d"
     },
     {
+      "id": "native.android.936714892af1b0f9",
+      "source": ":${uri.port}",
+      "translated": ":${uri.port}"
+    },
+    {
       "id": "native.android.c4a902430c22030c",
       "source": "Delete",
       "translated": "Excluir"
@@ -3679,6 +3684,26 @@
       "translated": "${tokens / 1_000}k"
     },
     {
+      "id": "native.android.ae8ffaf0304344ff",
+      "source": "Back",
+      "translated": "Voltar"
+    },
+    {
+      "id": "native.android.09fa98489fd0881b",
+      "source": "Dashboard",
+      "translated": "Painel"
+    },
+    {
+      "id": "native.android.285be3399daf82ee",
+      "source": "Dashboard needs a connected gateway",
+      "translated": "O painel precisa de um gateway conectado"
+    },
+    {
+      "id": "native.android.a1881da010cb4b9f",
+      "source": "Connect to your gateway to open this session dashboard.",
+      "translated": "Conecte-se ao seu gateway para abrir este painel de sessão."
+    },
+    {
       "id": "native.android.a5845742daecb4ba",
       "source": "Threads",
       "translated": "Conversas"
@@ -5572,6 +5597,11 @@
       "id": "native.android.bafe2765892cc6fa",
       "source": "Home",
       "translated": "Início"
+    },
+    {
+      "id": "native.android.d5b302e1a7695a7a",
+      "source": "Dashboard",
+      "translated": "Painel"
     },
     {
       "id": "native.android.30d8b822fa68d6c4",
@@ -7739,6 +7769,11 @@
       "translated": "Atualizar chat"
     },
     {
+      "id": "native.android.6966ae8bbad7347d",
+      "source": "Dashboard",
+      "translated": "Painel"
+    },
+    {
       "id": "native.android.b57a1b542cff8f55",
       "source": "Background tasks",
       "translated": "Tarefas em segundo plano"
@@ -7872,6 +7907,16 @@
       "id": "native.android.d7919c440a82f426",
       "source": "Speaking…",
       "translated": "Falando…"
+    },
+    {
+      "id": "native.android.bd78ce1e86e900b3",
+      "source": "Close",
+      "translated": "Fechar"
+    },
+    {
+      "id": "native.android.b686b1bc61494ee2",
+      "source": "View all",
+      "translated": "Ver tudo"
     },
     {
       "id": "native.android.781f84dfaf7da9d6",
@@ -8614,6 +8659,426 @@
       "translated": "Timestamp de compilação copiado"
     },
     {
+      "id": "native.android.342644995c7fa39d",
+      "source": "Chat",
+      "translated": "Chat"
+    },
+    {
+      "id": "native.android.f08059cbbd74d290",
+      "source": "Session",
+      "translated": "Sessão"
+    },
+    {
+      "id": "native.android.14c9261466ef05af",
+      "source": "Model",
+      "translated": "Modelo"
+    },
+    {
+      "id": "native.android.15cab72e6f01fd53",
+      "source": "Previous %1$s",
+      "translated": "Anterior %1$s"
+    },
+    {
+      "id": "native.android.3d3306e0ee9e21ee",
+      "source": "Next %1$s",
+      "translated": "Próximo %1$s"
+    },
+    {
+      "id": "native.android.27f269e3449860eb",
+      "source": "Controls",
+      "translated": "Controles"
+    },
+    {
+      "id": "native.android.162045314bf6d856",
+      "source": "Talk",
+      "translated": "Falar"
+    },
+    {
+      "id": "native.android.1e47fb0c88ffb1bd",
+      "source": "Watch audio failed",
+      "translated": "Falha ao monitorar áudio"
+    },
+    {
+      "id": "native.android.64e07fdfab3f96c5",
+      "source": "Dictate",
+      "translated": "Ditar"
+    },
+    {
+      "id": "native.android.aa64f5544405ffed",
+      "source": "Live",
+      "translated": "Ao vivo"
+    },
+    {
+      "id": "native.android.5d4de99dd6fd6764",
+      "source": "Thread",
+      "translated": "Thread"
+    },
+    {
+      "id": "native.android.4863e4958bf9a886",
+      "source": "← Swipe →",
+      "translated": "← Deslize →"
+    },
+    {
+      "id": "native.android.01979a7d84755f0e",
+      "source": "Hold",
+      "translated": "Segurar"
+    },
+    {
+      "id": "native.android.149e4509c9152931",
+      "source": "Tap",
+      "translated": "Tocar"
+    },
+    {
+      "id": "native.android.9f7fe0147a0b571a",
+      "source": "Double tap",
+      "translated": "Tocar duas vezes"
+    },
+    {
+      "id": "native.android.65caac394b5e4871",
+      "source": "Start Live to see the conversation here.",
+      "translated": "Inicie o Live para ver a conversa aqui."
+    },
+    {
+      "id": "native.android.80256ef5841e2f92",
+      "source": "New",
+      "translated": "Novo"
+    },
+    {
+      "id": "native.android.3091f3e818e51d8a",
+      "source": "Type",
+      "translated": "Digitar"
+    },
+    {
+      "id": "native.android.d6940b2883503ea3",
+      "source": "Message",
+      "translated": "Mensagem"
+    },
+    {
+      "id": "native.android.e9035dd5aded082a",
+      "source": "Message agent",
+      "translated": "Enviar mensagem ao agente"
+    },
+    {
+      "id": "native.android.66f9ad9c9cd1a92c",
+      "source": "Send",
+      "translated": "Enviar"
+    },
+    {
+      "id": "native.android.aed54d9c5e90b843",
+      "source": "Speak to your agent",
+      "translated": "Fale com seu agente"
+    },
+    {
+      "id": "native.android.30aa9dbcae2ce3c1",
+      "source": "Stop speaking",
+      "translated": "Parar de falar"
+    },
+    {
+      "id": "native.android.5c8f30c24360b983",
+      "source": "Speak latest reply",
+      "translated": "Falar última resposta"
+    },
+    {
+      "id": "native.android.e283a10e79578d3f",
+      "source": "Speaking",
+      "translated": "Falando"
+    },
+    {
+      "id": "native.android.0b19cfb5411358fa",
+      "source": "Listening",
+      "translated": "Ouvindo"
+    },
+    {
+      "id": "native.android.e40bdbd8bfc185e6",
+      "source": "Connecting",
+      "translated": "Conectando"
+    },
+    {
+      "id": "native.android.42ac9ae6e2a24424",
+      "source": "Thinking",
+      "translated": "Pensando"
+    },
+    {
+      "id": "native.android.e87b09e74f59ca70",
+      "source": "Typing",
+      "translated": "Digitando"
+    },
+    {
+      "id": "native.android.5357284dcb751316",
+      "source": "Sending",
+      "translated": "Enviando"
+    },
+    {
+      "id": "native.android.df216228910e6a31",
+      "source": "Agent working",
+      "translated": "Agente trabalhando"
+    },
+    {
+      "id": "native.android.0ab95b2723a4b400",
+      "source": "Error",
+      "translated": "Erro"
+    },
+    {
+      "id": "native.android.6f790004e204e002",
+      "source": "Ready",
+      "translated": "Pronto"
+    },
+    {
+      "id": "native.android.40984724c43be3ab",
+      "source": "You",
+      "translated": "Você"
+    },
+    {
+      "id": "native.android.4aaf8fd6103ce61d",
+      "source": "Agent",
+      "translated": "Agente"
+    },
+    {
+      "id": "native.android.c09b4d37b7750d4a",
+      "source": "System",
+      "translated": "Sistema"
+    },
+    {
+      "id": "native.android.beff51b9bde563db",
+      "source": "Start a conversation",
+      "translated": "Inicie uma conversa"
+    },
+    {
+      "id": "native.android.b8de3221042b2fd3",
+      "source": "Talk or type on your watch. The paired phone sends the message through its authenticated OpenClaw session.",
+      "translated": "Fale ou digite no seu relógio. O telefone pareado envia a mensagem pela sua sessão autenticada do OpenClaw."
+    },
+    {
+      "id": "native.android.44c6bb3c4c7b61ae",
+      "source": "Current session",
+      "translated": "Sessão atual"
+    },
+    {
+      "id": "native.android.29e0ff4871a97d3a",
+      "source": "Appearance",
+      "translated": "Aparência"
+    },
+    {
+      "id": "native.android.f54dda8777a206c0",
+      "source": "Dark",
+      "translated": "Escuro"
+    },
+    {
+      "id": "native.android.7709ce559ece7079",
+      "source": "Light",
+      "translated": "Claro"
+    },
+    {
+      "id": "native.android.bad64c6d810dd968",
+      "source": "Speak replies automatically",
+      "translated": "Falar respostas automaticamente"
+    },
+    {
+      "id": "native.android.bf13ece69b6f9e6d",
+      "source": "Reply alerts",
+      "translated": "Alertas de resposta"
+    },
+    {
+      "id": "native.android.ab451b22b15fef6a",
+      "source": "Enable alerts",
+      "translated": "Ativar alertas"
+    },
+    {
+      "id": "native.android.2ac0bfe2c63028e6",
+      "source": "Abort run",
+      "translated": "Abortar execução"
+    },
+    {
+      "id": "native.android.1c8ec9bc7a542592",
+      "source": "Open notification settings",
+      "translated": "Abrir configurações de notificação"
+    },
+    {
+      "id": "native.android.cac22bf83ae5e538",
+      "source": "On",
+      "translated": "Ativado"
+    },
+    {
+      "id": "native.android.8b2c37db3d4bfe78",
+      "source": "Off",
+      "translated": "Desativado"
+    },
+    {
+      "id": "native.android.dcf724e915521154",
+      "source": "Connection",
+      "translated": "Conexão"
+    },
+    {
+      "id": "native.android.d6576b5ea12e6635",
+      "source": "Gateway",
+      "translated": "Gateway"
+    },
+    {
+      "id": "native.android.5af2a90d687d5ded",
+      "source": "Security",
+      "translated": "Segurança"
+    },
+    {
+      "id": "native.android.bfa2a9759e56e431",
+      "source": "Phone-controlled",
+      "translated": "Controlado pelo celular"
+    },
+    {
+      "id": "native.android.9d53b66d3444d63f",
+      "source": "Gateway credentials and identity stay on the paired phone. The watch only uses the Wear Data Layer.",
+      "translated": "As credenciais e a identidade do Gateway permanecem no celular pareado. O relógio usa apenas o Wear Data Layer."
+    },
+    {
+      "id": "native.android.e4e15149f5634729",
+      "source": "Checking phone",
+      "translated": "Verificando o celular"
+    },
+    {
+      "id": "native.android.c1b0408a3b9a7855",
+      "source": "Reading agents, sessions, and chat",
+      "translated": "Lendo agentes, sessões e chat"
+    },
+    {
+      "id": "native.android.b6cb3ef2de0a91a1",
+      "source": "Phone ready",
+      "translated": "Celular pronto"
+    },
+    {
+      "id": "native.android.71511621861ee1f8",
+      "source": "Gateway connected",
+      "translated": "Gateway conectado"
+    },
+    {
+      "id": "native.android.e8a185d4eb48abe2",
+      "source": "Gateway offline",
+      "translated": "Gateway offline"
+    },
+    {
+      "id": "native.android.5d98a2a8a4f1f793",
+      "source": "Reconnect the Gateway in OpenClaw on the paired phone.",
+      "translated": "Reconecte o Gateway no OpenClaw no celular pareado."
+    },
+    {
+      "id": "native.android.867011d568b0b0db",
+      "source": "Open OpenClaw on phone",
+      "translated": "Abrir o OpenClaw no celular"
+    },
+    {
+      "id": "native.android.e70d812f3bc1bb40",
+      "source": "The watch never starts or authenticates the Gateway itself.",
+      "translated": "O relógio nunca inicia nem autentica o Gateway por conta própria."
+    },
+    {
+      "id": "native.android.be82f33ff358e212",
+      "source": "Phone not reachable",
+      "translated": "Celular inacessível"
+    },
+    {
+      "id": "native.android.d6c4dc6d15a4eaac",
+      "source": "Keep the paired phone nearby and install the matching OpenClaw app.",
+      "translated": "Mantenha o celular pareado por perto e instale o app OpenClaw correspondente."
+    },
+    {
+      "id": "native.android.bfebf63a2c96e9cd",
+      "source": "Selection no longer available",
+      "translated": "Seleção não mais disponível"
+    },
+    {
+      "id": "native.android.918aacdecf0e523b",
+      "source": "Action not accepted",
+      "translated": "Ação não aceita"
+    },
+    {
+      "id": "native.android.375286e6dbb16606",
+      "source": "Something went wrong",
+      "translated": "Algo deu errado"
+    },
+    {
+      "id": "native.android.e0e6d9ff3b7d8970",
+      "source": "Refresh the lists and try again.",
+      "translated": "Atualize as listas e tente novamente."
+    },
+    {
+      "id": "native.android.e9849178994c7414",
+      "source": "Try again from the watch.",
+      "translated": "Tente novamente pelo relógio."
+    },
+    {
+      "id": "native.android.3d44911564ea1c5a",
+      "source": "Update required",
+      "translated": "Atualização necessária"
+    },
+    {
+      "id": "native.android.ce39278848b1615d",
+      "source": "Update OpenClaw on both phone and watch.",
+      "translated": "Atualize o OpenClaw no celular e no relógio."
+    },
+    {
+      "id": "native.android.b5d6a37fb96f38f1",
+      "source": "Refresh",
+      "translated": "Atualizar"
+    },
+    {
+      "id": "native.android.a64989382158df47",
+      "source": "Retry",
+      "translated": "Tentar novamente"
+    },
+    {
+      "id": "native.android.6b973e2d4540f1dc",
+      "source": "OpenClaw replies",
+      "translated": "OpenClaw responde"
+    },
+    {
+      "id": "native.android.daf75f1939c5048f",
+      "source": "Reply",
+      "translated": "Responder"
+    },
+    {
+      "id": "native.android.2ab12cfd9399407c",
+      "source": "OpenClaw reply",
+      "translated": "Resposta do OpenClaw"
+    },
+    {
+      "id": "native.android.289456e2626dd0f4",
+      "source": "Reply not sent",
+      "translated": "Resposta não enviada"
+    },
+    {
+      "id": "native.android.bda7ccc6e4728f23",
+      "source": "Phone unavailable. Tap Reply to try again.",
+      "translated": "Telefone indisponível. Toque em Responder para tentar novamente."
+    },
+    {
+      "id": "native.android.3ec65645eda5ded7",
+      "source": "Open OpenClaw to reply",
+      "translated": "Abra o OpenClaw para responder"
+    },
+    {
+      "id": "native.android.7658464805a4b605",
+      "source": "Your preferred phone changed. Open the app to reload the session before replying.",
+      "translated": "Seu telefone preferido mudou. Abra o app para recarregar a sessão antes de responder."
+    },
+    {
+      "id": "native.android.6b2e913641d45f02",
+      "source": "OpenClaw",
+      "translated": "OpenClaw"
+    },
+    {
+      "id": "native.android.7c74dd9a2bf91d3a",
+      "source": "Open sessions and reply through your paired phone",
+      "translated": "Abra sessões e responda pelo seu telefone pareado"
+    },
+    {
+      "id": "native.android.6c2e2515598de209",
+      "source": "OPEN",
+      "translated": "ABRIR"
+    },
+    {
+      "id": "native.android.709aff840be1f167",
+      "source": "PHONE PROXY",
+      "translated": "PROXY DO TELEFONE"
+    },
+    {
       "id": "native.apple.8f741d09cc1d5495",
       "source": "OpenClaw Activity",
       "translated": "Atividade do OpenClaw"
@@ -8722,6 +9187,26 @@
       "id": "native.apple.a811eb3e4d2174d5",
       "source": "that request",
       "translated": "essa solicitação"
+    },
+    {
+      "id": "native.apple.91108e396155b531",
+      "source": "Dashboard",
+      "translated": "Painel"
+    },
+    {
+      "id": "native.apple.8a315564807ba77d",
+      "source": "Done",
+      "translated": "Concluído"
+    },
+    {
+      "id": "native.apple.1a8ef1f77055764f",
+      "source": "Dashboard needs a connected gateway",
+      "translated": "O painel precisa de um gateway conectado"
+    },
+    {
+      "id": "native.apple.0561fc7c6a99da55",
+      "source": "Connect to your gateway to open this session dashboard.",
+      "translated": "Conecte-se ao seu gateway para abrir este painel de sessão."
     },
     {
       "id": "native.apple.1696cec8c3c6a511",
@@ -10922,6 +11407,11 @@
       "id": "native.apple.a1b0d289758e2213",
       "source": "Sessions…",
       "translated": "Sessões…"
+    },
+    {
+      "id": "native.apple.38fb02182bd2430c",
+      "source": "Dashboard",
+      "translated": "Painel"
     },
     {
       "id": "native.apple.17c13312e7532c89",
@@ -13399,14 +13889,24 @@
       "translated": "Gateways pareados"
     },
     {
-      "id": "native.apple.9a6bd720a544ec04",
-      "source": "Switch gateways without pairing again.",
-      "translated": "Alterne entre gateways sem parear novamente."
+      "id": "native.apple.0c5dae9bc264aaa1",
+      "source": "Keep multiple gateways connected and switch which one is in focus.",
+      "translated": "Mantenha vários gateways conectados e alterne qual deles está em foco."
     },
     {
-      "id": "native.apple.5f33cfe2d21e6dc6",
-      "source": "Active Gateway",
-      "translated": "Gateway ativo"
+      "id": "native.apple.a1d2ffbfe64ef4ce",
+      "source": "Focused Gateway",
+      "translated": "Gateway em Foco"
+    },
+    {
+      "id": "native.apple.f819d2ea384fe6ed",
+      "source": "Disconnect Gateway",
+      "translated": "Desconectar Gateway"
+    },
+    {
+      "id": "native.apple.10d41627b8261536",
+      "source": "Keep Gateway Connected",
+      "translated": "Manter Gateway Conectado"
     },
     {
       "id": "native.apple.4e1792b1044ec4a9",
@@ -14387,6 +14887,11 @@
       "id": "native.apple.f21a8e304b607dc8",
       "source": "Copy",
       "translated": "Copiar"
+    },
+    {
+      "id": "native.apple.7896bc893de41eae",
+      "source": "Reconnecting…",
+      "translated": "Reconectando…"
     },
     {
       "id": "native.apple.760dbcb0180666e1",
@@ -16034,11 +16539,6 @@
       "translated": "Abrir configurações do Gateway"
     },
     {
-      "id": "native.apple.f90c1fb8880c70c0",
-      "source": "[\\(host)]",
-      "translated": "[\\(host)]"
-    },
-    {
       "id": "native.apple.3b21081fb5ce84ba",
       "source": "Not checked",
       "translated": "Não verificado"
@@ -16497,6 +16997,11 @@
       "id": "native.apple.00887489a998411e",
       "source": "%@ permission denied",
       "translated": "Permissão de %@ negada"
+    },
+    {
+      "id": "native.apple.944004de80cfc8b7",
+      "source": "[\\(host)]",
+      "translated": "[\\(host)]"
     },
     {
       "id": "native.apple.12a4a51d251f65c0",
@@ -19094,6 +19599,121 @@
       "translated": "unknown error"
     },
     {
+      "id": "native.apple.e0b70da297ef8a61",
+      "source": "Remove Gateway?",
+      "translated": "Remover Gateway?"
+    },
+    {
+      "id": "native.apple.983c58888b89f27f",
+      "source": "Remove",
+      "translated": "Remover"
+    },
+    {
+      "id": "native.apple.7b53872a9637b308",
+      "source": "\\(profile.name) and its saved credentials will be removed. Its open windows will close.",
+      "translated": "\\(profile.name) e suas credenciais salvas serão removidos. Suas janelas abertas serão fechadas."
+    },
+    {
+      "id": "native.apple.a4d437ba492adc8b",
+      "source": "Gateway Error",
+      "translated": "Erro do Gateway"
+    },
+    {
+      "id": "native.apple.33c3c61e0fb62195",
+      "source": "OK",
+      "translated": "OK"
+    },
+    {
+      "id": "native.apple.bfd13b43b2fd425c",
+      "source": "Gateways",
+      "translated": "Gateways"
+    },
+    {
+      "id": "native.apple.1ff05976802ac6c9",
+      "source": "Save Gateway connections for chat windows. The primary Gateway under Connection still owns Mac integrations and Talk Mode.",
+      "translated": "Salve conexões de Gateway para janelas de chat. O Gateway principal em Conexão ainda controla as integrações do Mac e o Talk Mode."
+    },
+    {
+      "id": "native.apple.7fdfccfafd3ff368",
+      "source": "Loading Gateways…",
+      "translated": "Carregando Gateways…"
+    },
+    {
+      "id": "native.apple.593c7f1b06caf821",
+      "source": "No Gateways saved",
+      "translated": "Nenhum Gateway salvo"
+    },
+    {
+      "id": "native.apple.9053ce4456cc06f0",
+      "source": "Add a Gateway here, then use File → New Gateway Window… (⌘N) whenever you want another window for it.",
+      "translated": "Adicione um Gateway aqui e depois use Arquivo → Nova Janela de Gateway… (⌘N) sempre que quiser outra janela para ele."
+    },
+    {
+      "id": "native.apple.5b3b79e66c434e33",
+      "source": "Saved Gateways",
+      "translated": "Gateways Salvos"
+    },
+    {
+      "id": "native.apple.c49f6831863c8dae",
+      "source": "Open Window",
+      "translated": "Abrir Janela"
+    },
+    {
+      "id": "native.apple.3c90290e04c6dc5f",
+      "source": "Remove \\(profile.name)",
+      "translated": "Remover \\(profile.name)"
+    },
+    {
+      "id": "native.apple.98935e9c19760b62",
+      "source": "Add Gateway",
+      "translated": "Adicionar Gateway"
+    },
+    {
+      "id": "native.apple.fb5076533e3003a3",
+      "source": "Credentials are stored with this profile in your Mac Keychain.",
+      "translated": "As credenciais são armazenadas com este perfil no Keychain do seu Mac."
+    },
+    {
+      "id": "native.apple.a7ee8d846fd61525",
+      "source": "Name",
+      "translated": "Nome"
+    },
+    {
+      "id": "native.apple.c65e3cdc3d2c9b36",
+      "source": "Studio",
+      "translated": "Studio"
+    },
+    {
+      "id": "native.apple.ce48afbb966a6933",
+      "source": "Gateway URL",
+      "translated": "URL do Gateway"
+    },
+    {
+      "id": "native.apple.aeb21e4c3192125f",
+      "source": "wss://gateway.example.com",
+      "translated": "wss://gateway.example.com"
+    },
+    {
+      "id": "native.apple.f585ed08c1f6a65e",
+      "source": "Token",
+      "translated": "Token"
+    },
+    {
+      "id": "native.apple.9a090d8a5c8fb7cb",
+      "source": "Password",
+      "translated": "Senha"
+    },
+    {
+      "id": "native.apple.f3448df352fdd5d4",
+      "source": "Optional",
+      "translated": "Opcional"
+    },
+    {
+      "id": "native.apple.1f1c9084eb6a2982",
+      "source": "Cancel",
+      "translated": "Cancelar"
+    },
+    {
       "id": "native.apple.7b5eaba753440639",
       "source": "General",
       "translated": "Geral"
@@ -19737,6 +20357,11 @@
       "id": "native.apple.01e6a456cdadce81",
       "source": "Critical",
       "translated": "Crítico"
+    },
+    {
+      "id": "native.apple.130664b1dd61cbbf",
+      "source": "New Gateway Window…",
+      "translated": "Nova Janela do Gateway…"
     },
     {
       "id": "native.apple.13f96467014cf344",
@@ -22089,6 +22714,11 @@
       "translated": "Conexão"
     },
     {
+      "id": "native.apple.1d96f676261a5a05",
+      "source": "Gateways",
+      "translated": "Gateways"
+    },
+    {
       "id": "native.apple.8c2b0262f3a5ebea",
       "source": "Permissions",
       "translated": "Permissões"
@@ -22604,32 +23234,32 @@
       "translated": "Agentes podem executar comandos de shell neste Mac sem verificações da lista de permissões."
     },
     {
-      "id": "native.apple.c8e6fc08f04b8d9f",
+      "id": "native.apple.5184684dc4a62edb",
       "source": "Block agent shell commands on this Mac.",
-      "translated": "Bloqueie comandos de shell de agentes neste Mac."
+      "translated": "Bloquear comandos de shell do agente neste Mac."
     },
     {
-      "id": "native.apple.e9371d48f629b039",
+      "id": "native.apple.bf1e546102919d3f",
       "source": "Allow trusted command patterns and handle misses with prompts.",
-      "translated": "Permita padrões de comandos confiáveis e lide com ausências usando solicitações."
+      "translated": "Permitir padrões de comando confiáveis e tratar exceções com solicitações."
     },
     {
-      "id": "native.apple.935c981496e8689b",
+      "id": "native.apple.84214f3fae821163",
       "source": "Allow shell commands without checking the allowlist.",
-      "translated": "Permita comandos de shell sem verificar a lista de permissões."
+      "translated": "Permitir comandos de shell sem verificar a lista de permissões."
     },
     {
-      "id": "native.apple.c494c0bb6a4182a2",
+      "id": "native.apple.d7404aa083ad6d58",
       "source": "Never show approval prompts.",
       "translated": "Nunca mostrar solicitações de aprovação."
     },
     {
-      "id": "native.apple.c04df969fed1b2ca",
+      "id": "native.apple.093c3c01af530076",
       "source": "Ask only when a command is not trusted yet.",
       "translated": "Perguntar apenas quando um comando ainda não for confiável."
     },
     {
-      "id": "native.apple.19950d3e6e99ee47",
+      "id": "native.apple.a5161a377e784404",
       "source": "Ask before every shell command.",
       "translated": "Perguntar antes de cada comando de shell."
     },
@@ -23004,14 +23634,19 @@
       "translated": "Remover palavra de ativação"
     },
     {
-      "id": "native.apple.65b2687f8f16f9b2",
-      "source": "Language \\(self.index + 2)",
-      "translated": "Idioma \\(self.index + 2)"
+      "id": "native.apple.dd0278dbfd438cdb",
+      "source": "Language %lld",
+      "translated": "Idioma %lld"
     },
     {
       "id": "native.apple.a767de022c4a06db",
       "source": "Fallback recognition language.",
       "translated": "Idioma de reconhecimento alternativo."
+    },
+    {
+      "id": "native.apple.65b2687f8f16f9b2",
+      "source": "Language \\(self.index + 2)",
+      "translated": "Idioma \\(self.index + 2)"
     },
     {
       "id": "native.apple.cfab77826c9ac1d1",
@@ -23067,6 +23702,16 @@
       "id": "native.apple.26960f2b7ebad5f9",
       "source": "Voice wake detected!",
       "translated": "Ativação por voz detectada!"
+    },
+    {
+      "id": "native.apple.7dd4d4d2fc36ffce",
+      "source": "Could Not Open Gateway Window",
+      "translated": "Não Foi Possível Abrir a Janela do Gateway"
+    },
+    {
+      "id": "native.apple.93ad62dac611bdcd",
+      "source": "Talk mode uses the primary Gateway window",
+      "translated": "O modo de fala usa a janela principal do Gateway"
     },
     {
       "id": "native.apple.282d11786f2f4c4b",
@@ -23542,6 +24187,26 @@
       "id": "native.apple.fccc8a9ba3da1426",
       "source": "Agent avatar",
       "translated": "Avatar do agente"
+    },
+    {
+      "id": "native.apple.9d4cffc5588d8730",
+      "source": "Show less",
+      "translated": "Mostrar menos"
+    },
+    {
+      "id": "native.apple.b0b4af1981ac0818",
+      "source": "Show more",
+      "translated": "Mostrar mais"
+    },
+    {
+      "id": "native.apple.29122616e14321b1",
+      "source": "Collapsed",
+      "translated": "Recolhido"
+    },
+    {
+      "id": "native.apple.aa75dc50a6ff606c",
+      "source": "Expanded",
+      "translated": "Expandido"
     },
     {
       "id": "native.apple.6426e369511b043c",
@@ -24287,16 +24952,6 @@
       "id": "native.apple.f80bb83a659d23f4",
       "source": "Collapsed",
       "translated": "Recolhido"
-    },
-    {
-      "id": "native.apple.c4e808a2ec8d49f5",
-      "source": "INSERT INTO cached_transcripts(gateway_id, session_key, agent_id, payload, updated_at)\nSELECT gateway_id, session_key, agent_id, payload, updated_at\nFROM cached_transcripts_pre_v3",
-      "translated": "INSERT INTO cached_transcripts(gateway_id, session_key, agent_id, payload, updated_at)\nSELECT gateway_id, session_key, agent_id, payload, updated_at\nFROM cached_transcripts_pre_v3"
-    },
-    {
-      "id": "native.apple.4e7e29be3f05b828",
-      "source": "INSERT INTO cached_transcripts(gateway_id, session_key, agent_id, payload, updated_at)\nSELECT gateway_id, session_key, '', payload, updated_at\nFROM cached_transcripts_pre_v3\nWHERE lower(trim(session_key)) GLOB 'agent:*:*'",
-      "translated": "INSERT INTO cached_transcripts(gateway_id, session_key, agent_id, payload, updated_at)\nSELECT gateway_id, session_key, '', payload, updated_at\nFROM cached_transcripts_pre_v3\nWHERE lower(trim(session_key)) GLOB 'agent:*:*'"
     },
     {
       "id": "native.apple.e743b1178c2fdec8",

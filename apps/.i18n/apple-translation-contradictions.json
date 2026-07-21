@@ -1198,6 +1198,22 @@
       ]
     },
     {
+      "locale": "nl",
+      "source": "Collapsed",
+      "translations": [
+        "Ingeklapt",
+        "Samengevouwen"
+      ]
+    },
+    {
+      "locale": "ru",
+      "source": "Collapsed",
+      "translations": [
+        "Свернуто",
+        "Свёрнуто"
+      ]
+    },
+    {
       "locale": "sv",
       "source": "Collapsed",
       "translations": [
@@ -1210,7 +1226,8 @@
       "source": "Collapsed",
       "translations": [
         "ยุบอยู่",
-        "ยุบแล้ว"
+        "ยุบแล้ว",
+        "ย่อ"
       ]
     },
     {
@@ -2825,6 +2842,70 @@
       "translations": [
         "Ativado",
         "Habilitado"
+      ]
+    },
+    {
+      "locale": "fa",
+      "source": "Expanded",
+      "translations": [
+        "بازشده",
+        "گسترش‌یافته"
+      ]
+    },
+    {
+      "locale": "id",
+      "source": "Expanded",
+      "translations": [
+        "Buka",
+        "Diperluas"
+      ]
+    },
+    {
+      "locale": "nl",
+      "source": "Expanded",
+      "translations": [
+        "Uitgeklapt",
+        "Uitgevouwen"
+      ]
+    },
+    {
+      "locale": "ru",
+      "source": "Expanded",
+      "translations": [
+        "Развернуто",
+        "Развёрнуто"
+      ]
+    },
+    {
+      "locale": "sv",
+      "source": "Expanded",
+      "translations": [
+        "Expanderad",
+        "Utfälld"
+      ]
+    },
+    {
+      "locale": "th",
+      "source": "Expanded",
+      "translations": [
+        "ขยาย",
+        "ขยายอยู่"
+      ]
+    },
+    {
+      "locale": "tr",
+      "source": "Expanded",
+      "translations": [
+        "Genişletildi",
+        "Genişletilmiş"
+      ]
+    },
+    {
+      "locale": "vi",
+      "source": "Expanded",
+      "translations": [
+        "Mở rộng",
+        "Đã mở rộng"
       ]
     },
     {
@@ -7197,7 +7278,8 @@
       "source": "Reconnecting…",
       "translations": [
         "Menghubungkan kembali…",
-        "Menghubungkan ulang…"
+        "Menghubungkan ulang…",
+        "Menyambungkan ulang…"
       ]
     },
     {
@@ -7213,6 +7295,7 @@
       "source": "Reconnecting…",
       "translations": [
         "다시 연결 중…",
+        "다시 연결하는 중…",
         "재연결 중…"
       ]
     },
@@ -8500,6 +8583,30 @@
       "translations": [
         "Configurar",
         "Configuração"
+      ]
+    },
+    {
+      "locale": "hi",
+      "source": "Show less",
+      "translations": [
+        "कम दिखाएँ",
+        "कम दिखाएं"
+      ]
+    },
+    {
+      "locale": "ja-JP",
+      "source": "Show less",
+      "translations": [
+        "折りたたむ",
+        "表示を減らす"
+      ]
+    },
+    {
+      "locale": "nl",
+      "source": "Show less",
+      "translations": [
+        "Minder weergeven",
+        "Toon minder"
       ]
     },
     {

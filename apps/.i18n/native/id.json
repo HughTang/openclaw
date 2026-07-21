@@ -1564,6 +1564,11 @@
       "translated": "${days}h"
     },
     {
+      "id": "native.android.936714892af1b0f9",
+      "source": ":${uri.port}",
+      "translated": ":${uri.port}"
+    },
+    {
       "id": "native.android.c4a902430c22030c",
       "source": "Delete",
       "translated": "Hapus"
@@ -3679,6 +3684,26 @@
       "translated": "${tokens / 1_000}k"
     },
     {
+      "id": "native.android.ae8ffaf0304344ff",
+      "source": "Back",
+      "translated": "Kembali"
+    },
+    {
+      "id": "native.android.09fa98489fd0881b",
+      "source": "Dashboard",
+      "translated": "Dasbor"
+    },
+    {
+      "id": "native.android.285be3399daf82ee",
+      "source": "Dashboard needs a connected gateway",
+      "translated": "Dasbor memerlukan gateway yang terhubung"
+    },
+    {
+      "id": "native.android.a1881da010cb4b9f",
+      "source": "Connect to your gateway to open this session dashboard.",
+      "translated": "Hubungkan ke gateway Anda untuk membuka dasbor sesi ini."
+    },
+    {
       "id": "native.android.a5845742daecb4ba",
       "source": "Threads",
       "translated": "Utas"
@@ -5572,6 +5597,11 @@
       "id": "native.android.bafe2765892cc6fa",
       "source": "Home",
       "translated": "Beranda"
+    },
+    {
+      "id": "native.android.d5b302e1a7695a7a",
+      "source": "Dashboard",
+      "translated": "Dasbor"
     },
     {
       "id": "native.android.30d8b822fa68d6c4",
@@ -7739,6 +7769,11 @@
       "translated": "Segarkan chat"
     },
     {
+      "id": "native.android.6966ae8bbad7347d",
+      "source": "Dashboard",
+      "translated": "Dasbor"
+    },
+    {
       "id": "native.android.b57a1b542cff8f55",
       "source": "Background tasks",
       "translated": "Tugas latar belakang"
@@ -7872,6 +7907,16 @@
       "id": "native.android.d7919c440a82f426",
       "source": "Speaking…",
       "translated": "Berbicara…"
+    },
+    {
+      "id": "native.android.bd78ce1e86e900b3",
+      "source": "Close",
+      "translated": "Tutup"
+    },
+    {
+      "id": "native.android.b686b1bc61494ee2",
+      "source": "View all",
+      "translated": "Lihat semua"
     },
     {
       "id": "native.android.781f84dfaf7da9d6",
@@ -8614,6 +8659,426 @@
       "translated": "Timestamp build disalin"
     },
     {
+      "id": "native.android.342644995c7fa39d",
+      "source": "Chat",
+      "translated": "Obrolan"
+    },
+    {
+      "id": "native.android.f08059cbbd74d290",
+      "source": "Session",
+      "translated": "Sesi"
+    },
+    {
+      "id": "native.android.14c9261466ef05af",
+      "source": "Model",
+      "translated": "Model"
+    },
+    {
+      "id": "native.android.15cab72e6f01fd53",
+      "source": "Previous %1$s",
+      "translated": "%1$s sebelumnya"
+    },
+    {
+      "id": "native.android.3d3306e0ee9e21ee",
+      "source": "Next %1$s",
+      "translated": "%1$s berikutnya"
+    },
+    {
+      "id": "native.android.27f269e3449860eb",
+      "source": "Controls",
+      "translated": "Kontrol"
+    },
+    {
+      "id": "native.android.162045314bf6d856",
+      "source": "Talk",
+      "translated": "Bicara"
+    },
+    {
+      "id": "native.android.1e47fb0c88ffb1bd",
+      "source": "Watch audio failed",
+      "translated": "Gagal memantau audio"
+    },
+    {
+      "id": "native.android.64e07fdfab3f96c5",
+      "source": "Dictate",
+      "translated": "Dikte"
+    },
+    {
+      "id": "native.android.aa64f5544405ffed",
+      "source": "Live",
+      "translated": "Langsung"
+    },
+    {
+      "id": "native.android.5d4de99dd6fd6764",
+      "source": "Thread",
+      "translated": "Utas"
+    },
+    {
+      "id": "native.android.4863e4958bf9a886",
+      "source": "← Swipe →",
+      "translated": "← Geser →"
+    },
+    {
+      "id": "native.android.01979a7d84755f0e",
+      "source": "Hold",
+      "translated": "Tahan"
+    },
+    {
+      "id": "native.android.149e4509c9152931",
+      "source": "Tap",
+      "translated": "Ketuk"
+    },
+    {
+      "id": "native.android.9f7fe0147a0b571a",
+      "source": "Double tap",
+      "translated": "Ketuk dua kali"
+    },
+    {
+      "id": "native.android.65caac394b5e4871",
+      "source": "Start Live to see the conversation here.",
+      "translated": "Mulai Live untuk melihat percakapan di sini."
+    },
+    {
+      "id": "native.android.80256ef5841e2f92",
+      "source": "New",
+      "translated": "Baru"
+    },
+    {
+      "id": "native.android.3091f3e818e51d8a",
+      "source": "Type",
+      "translated": "Ketik"
+    },
+    {
+      "id": "native.android.d6940b2883503ea3",
+      "source": "Message",
+      "translated": "Pesan"
+    },
+    {
+      "id": "native.android.e9035dd5aded082a",
+      "source": "Message agent",
+      "translated": "Kirim pesan ke agen"
+    },
+    {
+      "id": "native.android.66f9ad9c9cd1a92c",
+      "source": "Send",
+      "translated": "Kirim"
+    },
+    {
+      "id": "native.android.aed54d9c5e90b843",
+      "source": "Speak to your agent",
+      "translated": "Bicara dengan agen Anda"
+    },
+    {
+      "id": "native.android.30aa9dbcae2ce3c1",
+      "source": "Stop speaking",
+      "translated": "Berhenti berbicara"
+    },
+    {
+      "id": "native.android.5c8f30c24360b983",
+      "source": "Speak latest reply",
+      "translated": "Bacakan balasan terbaru"
+    },
+    {
+      "id": "native.android.e283a10e79578d3f",
+      "source": "Speaking",
+      "translated": "Berbicara"
+    },
+    {
+      "id": "native.android.0b19cfb5411358fa",
+      "source": "Listening",
+      "translated": "Mendengarkan"
+    },
+    {
+      "id": "native.android.e40bdbd8bfc185e6",
+      "source": "Connecting",
+      "translated": "Menghubungkan"
+    },
+    {
+      "id": "native.android.42ac9ae6e2a24424",
+      "source": "Thinking",
+      "translated": "Berpikir"
+    },
+    {
+      "id": "native.android.e87b09e74f59ca70",
+      "source": "Typing",
+      "translated": "Mengetik"
+    },
+    {
+      "id": "native.android.5357284dcb751316",
+      "source": "Sending",
+      "translated": "Mengirim"
+    },
+    {
+      "id": "native.android.df216228910e6a31",
+      "source": "Agent working",
+      "translated": "Agen sedang bekerja"
+    },
+    {
+      "id": "native.android.0ab95b2723a4b400",
+      "source": "Error",
+      "translated": "Kesalahan"
+    },
+    {
+      "id": "native.android.6f790004e204e002",
+      "source": "Ready",
+      "translated": "Siap"
+    },
+    {
+      "id": "native.android.40984724c43be3ab",
+      "source": "You",
+      "translated": "Anda"
+    },
+    {
+      "id": "native.android.4aaf8fd6103ce61d",
+      "source": "Agent",
+      "translated": "Agen"
+    },
+    {
+      "id": "native.android.c09b4d37b7750d4a",
+      "source": "System",
+      "translated": "Sistem"
+    },
+    {
+      "id": "native.android.beff51b9bde563db",
+      "source": "Start a conversation",
+      "translated": "Mulai percakapan"
+    },
+    {
+      "id": "native.android.b8de3221042b2fd3",
+      "source": "Talk or type on your watch. The paired phone sends the message through its authenticated OpenClaw session.",
+      "translated": "Bicara atau ketik di jam tangan Anda. Ponsel yang dipasangkan mengirim pesan melalui sesi OpenClaw terautentikasinya."
+    },
+    {
+      "id": "native.android.44c6bb3c4c7b61ae",
+      "source": "Current session",
+      "translated": "Sesi saat ini"
+    },
+    {
+      "id": "native.android.29e0ff4871a97d3a",
+      "source": "Appearance",
+      "translated": "Tampilan"
+    },
+    {
+      "id": "native.android.f54dda8777a206c0",
+      "source": "Dark",
+      "translated": "Gelap"
+    },
+    {
+      "id": "native.android.7709ce559ece7079",
+      "source": "Light",
+      "translated": "Terang"
+    },
+    {
+      "id": "native.android.bad64c6d810dd968",
+      "source": "Speak replies automatically",
+      "translated": "Ucapkan balasan secara otomatis"
+    },
+    {
+      "id": "native.android.bf13ece69b6f9e6d",
+      "source": "Reply alerts",
+      "translated": "Peringatan balasan"
+    },
+    {
+      "id": "native.android.ab451b22b15fef6a",
+      "source": "Enable alerts",
+      "translated": "Aktifkan peringatan"
+    },
+    {
+      "id": "native.android.2ac0bfe2c63028e6",
+      "source": "Abort run",
+      "translated": "Batalkan proses"
+    },
+    {
+      "id": "native.android.1c8ec9bc7a542592",
+      "source": "Open notification settings",
+      "translated": "Buka pengaturan notifikasi"
+    },
+    {
+      "id": "native.android.cac22bf83ae5e538",
+      "source": "On",
+      "translated": "Aktif"
+    },
+    {
+      "id": "native.android.8b2c37db3d4bfe78",
+      "source": "Off",
+      "translated": "Nonaktif"
+    },
+    {
+      "id": "native.android.dcf724e915521154",
+      "source": "Connection",
+      "translated": "Koneksi"
+    },
+    {
+      "id": "native.android.d6576b5ea12e6635",
+      "source": "Gateway",
+      "translated": "Gateway"
+    },
+    {
+      "id": "native.android.5af2a90d687d5ded",
+      "source": "Security",
+      "translated": "Keamanan"
+    },
+    {
+      "id": "native.android.bfa2a9759e56e431",
+      "source": "Phone-controlled",
+      "translated": "Dikendalikan ponsel"
+    },
+    {
+      "id": "native.android.9d53b66d3444d63f",
+      "source": "Gateway credentials and identity stay on the paired phone. The watch only uses the Wear Data Layer.",
+      "translated": "Kredensial dan identitas Gateway tetap di ponsel yang dipasangkan. Jam tangan hanya menggunakan Wear Data Layer."
+    },
+    {
+      "id": "native.android.e4e15149f5634729",
+      "source": "Checking phone",
+      "translated": "Memeriksa ponsel"
+    },
+    {
+      "id": "native.android.c1b0408a3b9a7855",
+      "source": "Reading agents, sessions, and chat",
+      "translated": "Membaca agen, sesi, dan obrolan"
+    },
+    {
+      "id": "native.android.b6cb3ef2de0a91a1",
+      "source": "Phone ready",
+      "translated": "Ponsel siap"
+    },
+    {
+      "id": "native.android.71511621861ee1f8",
+      "source": "Gateway connected",
+      "translated": "Gateway terhubung"
+    },
+    {
+      "id": "native.android.e8a185d4eb48abe2",
+      "source": "Gateway offline",
+      "translated": "Gateway offline"
+    },
+    {
+      "id": "native.android.5d98a2a8a4f1f793",
+      "source": "Reconnect the Gateway in OpenClaw on the paired phone.",
+      "translated": "Sambungkan kembali Gateway di OpenClaw pada ponsel yang dipasangkan."
+    },
+    {
+      "id": "native.android.867011d568b0b0db",
+      "source": "Open OpenClaw on phone",
+      "translated": "Buka OpenClaw di ponsel"
+    },
+    {
+      "id": "native.android.e70d812f3bc1bb40",
+      "source": "The watch never starts or authenticates the Gateway itself.",
+      "translated": "Jam tangan tidak pernah menjalankan atau mengautentikasi Gateway sendiri."
+    },
+    {
+      "id": "native.android.be82f33ff358e212",
+      "source": "Phone not reachable",
+      "translated": "Ponsel tidak terjangkau"
+    },
+    {
+      "id": "native.android.d6c4dc6d15a4eaac",
+      "source": "Keep the paired phone nearby and install the matching OpenClaw app.",
+      "translated": "Dekatkan ponsel yang dipasangkan dan pasang aplikasi OpenClaw yang sesuai."
+    },
+    {
+      "id": "native.android.bfebf63a2c96e9cd",
+      "source": "Selection no longer available",
+      "translated": "Pilihan tidak lagi tersedia"
+    },
+    {
+      "id": "native.android.918aacdecf0e523b",
+      "source": "Action not accepted",
+      "translated": "Tindakan tidak diterima"
+    },
+    {
+      "id": "native.android.375286e6dbb16606",
+      "source": "Something went wrong",
+      "translated": "Terjadi kesalahan"
+    },
+    {
+      "id": "native.android.e0e6d9ff3b7d8970",
+      "source": "Refresh the lists and try again.",
+      "translated": "Segarkan daftar dan coba lagi."
+    },
+    {
+      "id": "native.android.e9849178994c7414",
+      "source": "Try again from the watch.",
+      "translated": "Coba lagi dari jam tangan."
+    },
+    {
+      "id": "native.android.3d44911564ea1c5a",
+      "source": "Update required",
+      "translated": "Pembaruan diperlukan"
+    },
+    {
+      "id": "native.android.ce39278848b1615d",
+      "source": "Update OpenClaw on both phone and watch.",
+      "translated": "Perbarui OpenClaw di ponsel dan jam tangan."
+    },
+    {
+      "id": "native.android.b5d6a37fb96f38f1",
+      "source": "Refresh",
+      "translated": "Segarkan"
+    },
+    {
+      "id": "native.android.a64989382158df47",
+      "source": "Retry",
+      "translated": "Coba Lagi"
+    },
+    {
+      "id": "native.android.6b973e2d4540f1dc",
+      "source": "OpenClaw replies",
+      "translated": "OpenClaw membalas"
+    },
+    {
+      "id": "native.android.daf75f1939c5048f",
+      "source": "Reply",
+      "translated": "Balas"
+    },
+    {
+      "id": "native.android.2ab12cfd9399407c",
+      "source": "OpenClaw reply",
+      "translated": "Balasan OpenClaw"
+    },
+    {
+      "id": "native.android.289456e2626dd0f4",
+      "source": "Reply not sent",
+      "translated": "Balasan tidak terkirim"
+    },
+    {
+      "id": "native.android.bda7ccc6e4728f23",
+      "source": "Phone unavailable. Tap Reply to try again.",
+      "translated": "Ponsel tidak tersedia. Ketuk Balas untuk mencoba lagi."
+    },
+    {
+      "id": "native.android.3ec65645eda5ded7",
+      "source": "Open OpenClaw to reply",
+      "translated": "Buka OpenClaw untuk membalas"
+    },
+    {
+      "id": "native.android.7658464805a4b605",
+      "source": "Your preferred phone changed. Open the app to reload the session before replying.",
+      "translated": "Ponsel pilihan Anda berubah. Buka aplikasi untuk memuat ulang sesi sebelum membalas."
+    },
+    {
+      "id": "native.android.6b2e913641d45f02",
+      "source": "OpenClaw",
+      "translated": "OpenClaw"
+    },
+    {
+      "id": "native.android.7c74dd9a2bf91d3a",
+      "source": "Open sessions and reply through your paired phone",
+      "translated": "Buka sesi dan balas melalui ponsel yang dipasangkan"
+    },
+    {
+      "id": "native.android.6c2e2515598de209",
+      "source": "OPEN",
+      "translated": "BUKA"
+    },
+    {
+      "id": "native.android.709aff840be1f167",
+      "source": "PHONE PROXY",
+      "translated": "PROXY PONSEL"
+    },
+    {
       "id": "native.apple.8f741d09cc1d5495",
       "source": "OpenClaw Activity",
       "translated": "Aktivitas OpenClaw"
@@ -8722,6 +9187,26 @@
       "id": "native.apple.a811eb3e4d2174d5",
       "source": "that request",
       "translated": "permintaan tersebut"
+    },
+    {
+      "id": "native.apple.91108e396155b531",
+      "source": "Dashboard",
+      "translated": "Dasbor"
+    },
+    {
+      "id": "native.apple.8a315564807ba77d",
+      "source": "Done",
+      "translated": "Selesai"
+    },
+    {
+      "id": "native.apple.1a8ef1f77055764f",
+      "source": "Dashboard needs a connected gateway",
+      "translated": "Dasbor memerlukan gateway yang terhubung"
+    },
+    {
+      "id": "native.apple.0561fc7c6a99da55",
+      "source": "Connect to your gateway to open this session dashboard.",
+      "translated": "Hubungkan ke gateway Anda untuk membuka dasbor sesi ini."
     },
     {
       "id": "native.apple.1696cec8c3c6a511",
@@ -10922,6 +11407,11 @@
       "id": "native.apple.a1b0d289758e2213",
       "source": "Sessions…",
       "translated": "Sesi…"
+    },
+    {
+      "id": "native.apple.38fb02182bd2430c",
+      "source": "Dashboard",
+      "translated": "Dasbor"
     },
     {
       "id": "native.apple.17c13312e7532c89",
@@ -13399,14 +13889,24 @@
       "translated": "Gateway Terpasang"
     },
     {
-      "id": "native.apple.9a6bd720a544ec04",
-      "source": "Switch gateways without pairing again.",
-      "translated": "Beralih gateway tanpa memasangkan lagi."
+      "id": "native.apple.0c5dae9bc264aaa1",
+      "source": "Keep multiple gateways connected and switch which one is in focus.",
+      "translated": "Pertahankan beberapa gateway tetap terhubung dan alihkan mana yang menjadi fokus."
     },
     {
-      "id": "native.apple.5f33cfe2d21e6dc6",
-      "source": "Active Gateway",
-      "translated": "Gateway Aktif"
+      "id": "native.apple.a1d2ffbfe64ef4ce",
+      "source": "Focused Gateway",
+      "translated": "Gateway Fokus"
+    },
+    {
+      "id": "native.apple.f819d2ea384fe6ed",
+      "source": "Disconnect Gateway",
+      "translated": "Putuskan Gateway"
+    },
+    {
+      "id": "native.apple.10d41627b8261536",
+      "source": "Keep Gateway Connected",
+      "translated": "Tetap Sambungkan Gateway"
     },
     {
       "id": "native.apple.4e1792b1044ec4a9",
@@ -14387,6 +14887,11 @@
       "id": "native.apple.f21a8e304b607dc8",
       "source": "Copy",
       "translated": "Salin"
+    },
+    {
+      "id": "native.apple.7896bc893de41eae",
+      "source": "Reconnecting…",
+      "translated": "Menyambungkan ulang…"
     },
     {
       "id": "native.apple.760dbcb0180666e1",
@@ -16034,11 +16539,6 @@
       "translated": "Buka Pengaturan Gateway"
     },
     {
-      "id": "native.apple.f90c1fb8880c70c0",
-      "source": "[\\(host)]",
-      "translated": "[\\(host)]"
-    },
-    {
       "id": "native.apple.3b21081fb5ce84ba",
       "source": "Not checked",
       "translated": "Belum diperiksa"
@@ -16497,6 +16997,11 @@
       "id": "native.apple.00887489a998411e",
       "source": "%@ permission denied",
       "translated": "Izin %@ ditolak"
+    },
+    {
+      "id": "native.apple.944004de80cfc8b7",
+      "source": "[\\(host)]",
+      "translated": "[\\(host)]"
     },
     {
       "id": "native.apple.12a4a51d251f65c0",
@@ -19094,6 +19599,121 @@
       "translated": "unknown error"
     },
     {
+      "id": "native.apple.e0b70da297ef8a61",
+      "source": "Remove Gateway?",
+      "translated": "Hapus Gateway?"
+    },
+    {
+      "id": "native.apple.983c58888b89f27f",
+      "source": "Remove",
+      "translated": "Hapus"
+    },
+    {
+      "id": "native.apple.7b53872a9637b308",
+      "source": "\\(profile.name) and its saved credentials will be removed. Its open windows will close.",
+      "translated": "\\(profile.name) dan kredensial tersimpannya akan dihapus. Jendela terbukanya akan ditutup."
+    },
+    {
+      "id": "native.apple.a4d437ba492adc8b",
+      "source": "Gateway Error",
+      "translated": "Kesalahan Gateway"
+    },
+    {
+      "id": "native.apple.33c3c61e0fb62195",
+      "source": "OK",
+      "translated": "OK"
+    },
+    {
+      "id": "native.apple.bfd13b43b2fd425c",
+      "source": "Gateways",
+      "translated": "Gateway"
+    },
+    {
+      "id": "native.apple.1ff05976802ac6c9",
+      "source": "Save Gateway connections for chat windows. The primary Gateway under Connection still owns Mac integrations and Talk Mode.",
+      "translated": "Simpan koneksi Gateway untuk jendela obrolan. Gateway utama di bawah Koneksi tetap memiliki integrasi Mac dan Talk Mode."
+    },
+    {
+      "id": "native.apple.7fdfccfafd3ff368",
+      "source": "Loading Gateways…",
+      "translated": "Memuat Gateway…"
+    },
+    {
+      "id": "native.apple.593c7f1b06caf821",
+      "source": "No Gateways saved",
+      "translated": "Tidak ada Gateway tersimpan"
+    },
+    {
+      "id": "native.apple.9053ce4456cc06f0",
+      "source": "Add a Gateway here, then use File → New Gateway Window… (⌘N) whenever you want another window for it.",
+      "translated": "Tambahkan Gateway di sini, lalu gunakan File → New Gateway Window… (⌘N) kapan pun Anda ingin jendela lain untuknya."
+    },
+    {
+      "id": "native.apple.5b3b79e66c434e33",
+      "source": "Saved Gateways",
+      "translated": "Gateway Tersimpan"
+    },
+    {
+      "id": "native.apple.c49f6831863c8dae",
+      "source": "Open Window",
+      "translated": "Buka Jendela"
+    },
+    {
+      "id": "native.apple.3c90290e04c6dc5f",
+      "source": "Remove \\(profile.name)",
+      "translated": "Hapus \\(profile.name)"
+    },
+    {
+      "id": "native.apple.98935e9c19760b62",
+      "source": "Add Gateway",
+      "translated": "Tambah Gateway"
+    },
+    {
+      "id": "native.apple.fb5076533e3003a3",
+      "source": "Credentials are stored with this profile in your Mac Keychain.",
+      "translated": "Kredensial disimpan bersama profil ini di Keychain Mac Anda."
+    },
+    {
+      "id": "native.apple.a7ee8d846fd61525",
+      "source": "Name",
+      "translated": "Nama"
+    },
+    {
+      "id": "native.apple.c65e3cdc3d2c9b36",
+      "source": "Studio",
+      "translated": "Studio"
+    },
+    {
+      "id": "native.apple.ce48afbb966a6933",
+      "source": "Gateway URL",
+      "translated": "URL Gateway"
+    },
+    {
+      "id": "native.apple.aeb21e4c3192125f",
+      "source": "wss://gateway.example.com",
+      "translated": "wss://gateway.example.com"
+    },
+    {
+      "id": "native.apple.f585ed08c1f6a65e",
+      "source": "Token",
+      "translated": "Token"
+    },
+    {
+      "id": "native.apple.9a090d8a5c8fb7cb",
+      "source": "Password",
+      "translated": "Kata Sandi"
+    },
+    {
+      "id": "native.apple.f3448df352fdd5d4",
+      "source": "Optional",
+      "translated": "Opsional"
+    },
+    {
+      "id": "native.apple.1f1c9084eb6a2982",
+      "source": "Cancel",
+      "translated": "Batal"
+    },
+    {
       "id": "native.apple.7b5eaba753440639",
       "source": "General",
       "translated": "Umum"
@@ -19737,6 +20357,11 @@
       "id": "native.apple.01e6a456cdadce81",
       "source": "Critical",
       "translated": "Kritis"
+    },
+    {
+      "id": "native.apple.130664b1dd61cbbf",
+      "source": "New Gateway Window…",
+      "translated": "Jendela Gateway Baru…"
     },
     {
       "id": "native.apple.13f96467014cf344",
@@ -22089,6 +22714,11 @@
       "translated": "Koneksi"
     },
     {
+      "id": "native.apple.1d96f676261a5a05",
+      "source": "Gateways",
+      "translated": "Gateway"
+    },
+    {
       "id": "native.apple.8c2b0262f3a5ebea",
       "source": "Permissions",
       "translated": "Izin"
@@ -22604,34 +23234,34 @@
       "translated": "Agent dapat menjalankan perintah shell di Mac ini tanpa pemeriksaan allowlist."
     },
     {
-      "id": "native.apple.c8e6fc08f04b8d9f",
+      "id": "native.apple.5184684dc4a62edb",
       "source": "Block agent shell commands on this Mac.",
-      "translated": "Blokir perintah shell agent di Mac ini."
+      "translated": "Blokir perintah shell agen di Mac ini."
     },
     {
-      "id": "native.apple.e9371d48f629b039",
+      "id": "native.apple.bf1e546102919d3f",
       "source": "Allow trusted command patterns and handle misses with prompts.",
       "translated": "Izinkan pola perintah tepercaya dan tangani yang tidak cocok dengan prompt."
     },
     {
-      "id": "native.apple.935c981496e8689b",
+      "id": "native.apple.84214f3fae821163",
       "source": "Allow shell commands without checking the allowlist.",
-      "translated": "Izinkan perintah shell tanpa memeriksa allowlist."
+      "translated": "Izinkan perintah shell tanpa memeriksa daftar izin."
     },
     {
-      "id": "native.apple.c494c0bb6a4182a2",
+      "id": "native.apple.d7404aa083ad6d58",
       "source": "Never show approval prompts.",
       "translated": "Jangan pernah tampilkan prompt persetujuan."
     },
     {
-      "id": "native.apple.c04df969fed1b2ca",
+      "id": "native.apple.093c3c01af530076",
       "source": "Ask only when a command is not trusted yet.",
-      "translated": "Tanyakan hanya saat perintah belum tepercaya."
+      "translated": "Tanya hanya jika perintah belum tepercaya."
     },
     {
-      "id": "native.apple.19950d3e6e99ee47",
+      "id": "native.apple.a5161a377e784404",
       "source": "Ask before every shell command.",
-      "translated": "Tanyakan sebelum setiap perintah shell."
+      "translated": "Tanya sebelum setiap perintah shell."
     },
     {
       "id": "native.apple.b18215308bc4e7cf",
@@ -23004,14 +23634,19 @@
       "translated": "Hapus kata pemicu"
     },
     {
-      "id": "native.apple.65b2687f8f16f9b2",
-      "source": "Language \\(self.index + 2)",
-      "translated": "Bahasa \\(self.index + 2)"
+      "id": "native.apple.dd0278dbfd438cdb",
+      "source": "Language %lld",
+      "translated": "Bahasa %lld"
     },
     {
       "id": "native.apple.a767de022c4a06db",
       "source": "Fallback recognition language.",
       "translated": "Bahasa pengenalan cadangan."
+    },
+    {
+      "id": "native.apple.65b2687f8f16f9b2",
+      "source": "Language \\(self.index + 2)",
+      "translated": "Bahasa \\(self.index + 2)"
     },
     {
       "id": "native.apple.cfab77826c9ac1d1",
@@ -23067,6 +23702,16 @@
       "id": "native.apple.26960f2b7ebad5f9",
       "source": "Voice wake detected!",
       "translated": "Bangun suara terdeteksi!"
+    },
+    {
+      "id": "native.apple.7dd4d4d2fc36ffce",
+      "source": "Could Not Open Gateway Window",
+      "translated": "Tidak Dapat Membuka Jendela Gateway"
+    },
+    {
+      "id": "native.apple.93ad62dac611bdcd",
+      "source": "Talk mode uses the primary Gateway window",
+      "translated": "Mode bicara menggunakan jendela Gateway utama"
     },
     {
       "id": "native.apple.282d11786f2f4c4b",
@@ -23542,6 +24187,26 @@
       "id": "native.apple.fccc8a9ba3da1426",
       "source": "Agent avatar",
       "translated": "Avatar agen"
+    },
+    {
+      "id": "native.apple.9d4cffc5588d8730",
+      "source": "Show less",
+      "translated": "Tampilkan lebih sedikit"
+    },
+    {
+      "id": "native.apple.b0b4af1981ac0818",
+      "source": "Show more",
+      "translated": "Tampilkan lebih banyak"
+    },
+    {
+      "id": "native.apple.29122616e14321b1",
+      "source": "Collapsed",
+      "translated": "Diciutkan"
+    },
+    {
+      "id": "native.apple.aa75dc50a6ff606c",
+      "source": "Expanded",
+      "translated": "Diperluas"
     },
     {
       "id": "native.apple.6426e369511b043c",
@@ -24287,16 +24952,6 @@
       "id": "native.apple.f80bb83a659d23f4",
       "source": "Collapsed",
       "translated": "Diciutkan"
-    },
-    {
-      "id": "native.apple.c4e808a2ec8d49f5",
-      "source": "INSERT INTO cached_transcripts(gateway_id, session_key, agent_id, payload, updated_at)\nSELECT gateway_id, session_key, agent_id, payload, updated_at\nFROM cached_transcripts_pre_v3",
-      "translated": "INSERT INTO cached_transcripts(gateway_id, session_key, agent_id, payload, updated_at)\nSELECT gateway_id, session_key, agent_id, payload, updated_at\nFROM cached_transcripts_pre_v3"
-    },
-    {
-      "id": "native.apple.4e7e29be3f05b828",
-      "source": "INSERT INTO cached_transcripts(gateway_id, session_key, agent_id, payload, updated_at)\nSELECT gateway_id, session_key, '', payload, updated_at\nFROM cached_transcripts_pre_v3\nWHERE lower(trim(session_key)) GLOB 'agent:*:*'",
-      "translated": "INSERT INTO cached_transcripts(gateway_id, session_key, agent_id, payload, updated_at)\nSELECT gateway_id, session_key, '', payload, updated_at\nFROM cached_transcripts_pre_v3\nWHERE lower(trim(session_key)) GLOB 'agent:*:*'"
     },
     {
       "id": "native.apple.e743b1178c2fdec8",
